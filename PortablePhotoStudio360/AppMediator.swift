@@ -17,7 +17,7 @@ class AppMediator: NSObject {
     }
     
     func start() {
-        window.rootViewController = ViewController()
+        window.rootViewController = TestViewController()
         window.makeKeyAndVisible()
     }
 }

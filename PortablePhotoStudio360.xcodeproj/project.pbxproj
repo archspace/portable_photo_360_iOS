@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		117BA80C1F1211560006541B /* AppMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BA80B1F1211560006541B /* AppMediator.swift */; };
 		11E027D71F121048009D56A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E027D61F121048009D56A9 /* AppDelegate.swift */; };
-		11E027D91F121048009D56A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E027D81F121048009D56A9 /* ViewController.swift */; };
+		11E027D91F121048009D56A9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E027D81F121048009D56A9 /* TestViewController.swift */; };
 		11E027DE1F121048009D56A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E027DD1F121048009D56A9 /* Assets.xcassets */; };
 		11E027E11F121048009D56A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E027DF1F121048009D56A9 /* LaunchScreen.storyboard */; };
 		11E027EC1F121048009D56A9 /* PortablePhotoStudio360Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E027EB1F121048009D56A9 /* PortablePhotoStudio360Tests.swift */; };
@@ -32,7 +32,7 @@
 		11B1A6F4E6B3AE1E5472C0F5 /* Pods-PortablePhotoStudio360.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortablePhotoStudio360.release.xcconfig"; path = "Pods/Target Support Files/Pods-PortablePhotoStudio360/Pods-PortablePhotoStudio360.release.xcconfig"; sourceTree = "<group>"; };
 		11E027D31F121048009D56A9 /* PortablePhotoStudio360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortablePhotoStudio360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E027D61F121048009D56A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11E027D81F121048009D56A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11E027D81F121048009D56A9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		11E027DD1F121048009D56A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E027E01F121048009D56A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11E027E21F121048009D56A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 			children = (
 				117BA80A1F12113E0006541B /* mediators */,
 				11E027D61F121048009D56A9 /* AppDelegate.swift */,
-				11E027D81F121048009D56A9 /* ViewController.swift */,
+				11E027D81F121048009D56A9 /* TestViewController.swift */,
 				11E027DD1F121048009D56A9 /* Assets.xcassets */,
 				11E027DF1F121048009D56A9 /* LaunchScreen.storyboard */,
 				11E027E21F121048009D56A9 /* Info.plist */,
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				117BA80C1F1211560006541B /* AppMediator.swift in Sources */,
-				11E027D91F121048009D56A9 /* ViewController.swift in Sources */,
+				11E027D91F121048009D56A9 /* TestViewController.swift in Sources */,
 				11E027D71F121048009D56A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
