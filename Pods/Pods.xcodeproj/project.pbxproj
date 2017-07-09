@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12FD40F16072232CBCC96C0D53359EF6 /* PinLayoutImpl+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */; };
+		1D70367CCEA9719C58268068897B485C /* PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */; };
+		2E5327547ACF46A7FB70EAAA0F7EE993 /* PinLayoutImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */; };
+		4AD02EA46E234EC3642A36D16B609F81 /* Pods-PortablePhotoStudio360-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */; };
+		51DBE76BE50BF8BECF53127C60673CE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6A8CB8760A7567997F9BF32A212F44CB /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */; };
+		902C94675DA86921DAA95757825DB6F0 /* PinLayoutImpl+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */; };
+		97D5CC77541BF91AE7270CDF1D977023 /* PinLayoutImpl+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */; };
+		A9AEF823E94FC2144CEA820F6C4EC9CA /* Pods-PortablePhotoStudio360Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0BCD6AAD9850FDBDFF9F36D0FE891A7 /* Pods-PortablePhotoStudio360Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABC46351D900D2BC22977A4A4C6D7130 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5E7B006A006B0E5E120EEEB7AE3394A /* PinLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */; };
+		B99352DCA6FECC9C55D8E0AA8753BB25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BD319AA9A7671FA84805EEF8A5528F0D /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */; };
+		E8F4A4402603B14F1E017C156E60AD56 /* Pods-PortablePhotoStudio360Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E6168BEF1A757AA95E8E6A3FD490A /* Pods-PortablePhotoStudio360Tests-dummy.m */; };
+		EB49D3A218230DAC03F2ECCBA33D3CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EF3DFE499EAEE6B939F6756AD49360EC /* PinLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE7D1FEA3D601B3DE691C3215580831C /* PinLayout+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		172F3A25B7C19E3CF39A2EB38FA9360E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFC8F0BC2061F1B0118FCC32E4D2643A;
+			remoteInfo = PinLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E35F8801F835A77AE32E9B2777F411 /* Pods-PortablePhotoStudio360-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PortablePhotoStudio360-acknowledgements.markdown"; sourceTree = "<group>"; };
+		06CDB2BEBD4BDEA3FA021CE3D824A35C /* Pods-PortablePhotoStudio360Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360Tests-frameworks.sh"; sourceTree = "<group>"; };
+		091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayout.swift; path = Sources/PinLayout.swift; sourceTree = "<group>"; };
+		0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PinLayout.framework; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PortablePhotoStudio360-dummy.m"; sourceTree = "<group>"; };
+		2103814D436913E69F0E46C7C1763CB1 /* PinLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PinLayout.modulemap; sourceTree = "<group>"; };
+		260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Warning.swift"; path = "Sources/PinLayoutImpl+Warning.swift"; sourceTree = "<group>"; };
+		27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-umbrella.h"; sourceTree = "<group>"; };
+		2A35D878AA2A2532CA715B2682C0A937 /* Pods-PortablePhotoStudio360-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360-resources.sh"; sourceTree = "<group>"; };
+		2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Coordinates.swift"; path = "Sources/PinLayoutImpl+Coordinates.swift"; sourceTree = "<group>"; };
+		31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PinLayout.xcconfig; sourceTree = "<group>"; };
+		4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinates.swift; path = Sources/Coordinates.swift; sourceTree = "<group>"; };
+		578A5ABE8071D103615434193280990C /* Pods-PortablePhotoStudio360-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360-frameworks.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		665E6168BEF1A757AA95E8E6A3FD490A /* Pods-PortablePhotoStudio360Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PortablePhotoStudio360Tests-dummy.m"; sourceTree = "<group>"; };
+		75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Relative.swift"; path = "Sources/PinLayoutImpl+Relative.swift"; sourceTree = "<group>"; };
+		7917258A96306D7E2A9F6E09E35FF8DD /* Pods-PortablePhotoStudio360Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7C0745232FB69A049FD31FB867D955F1 /* Pods-PortablePhotoStudio360.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PortablePhotoStudio360.modulemap"; sourceTree = "<group>"; };
+		89052D2690C4DE5C868888B145F22DED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3A4C8DD85EA57EC2025038F6833798 /* Pods-PortablePhotoStudio360.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360.release.xcconfig"; sourceTree = "<group>"; };
+		8D1774F8299578D760391164937F0E2F /* Pods-PortablePhotoStudio360Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360Tests-resources.sh"; sourceTree = "<group>"; };
+		9300F7AD53899520CBD85F46B7CCD176 /* Pods-PortablePhotoStudio360Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B6FD9FF7FB692799491D9AD9F63EF77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayout+Filters.swift"; path = "Sources/PinLayout+Filters.swift"; sourceTree = "<group>"; };
+		ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PortablePhotoStudio360-umbrella.h"; sourceTree = "<group>"; };
+		BAFA612AED639F2BBA656650B1C7AF44 /* Pods-PortablePhotoStudio360Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PortablePhotoStudio360Tests.modulemap"; sourceTree = "<group>"; };
+		BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypesImpl.swift; path = Sources/TypesImpl.swift; sourceTree = "<group>"; };
+		BD093E54ED883D376535B43805354846 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PinLayout-dummy.m"; sourceTree = "<group>"; };
+		C0BCD6AAD9850FDBDFF9F36D0FE891A7 /* Pods-PortablePhotoStudio360Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PortablePhotoStudio360Tests-umbrella.h"; sourceTree = "<group>"; };
+		C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayoutImpl.swift; path = Sources/PinLayoutImpl.swift; sourceTree = "<group>"; };
+		C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360Tests.framework; path = "Pods-PortablePhotoStudio360Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F7F4B5F46787286D4D795E267136E7 /* Pods-PortablePhotoStudio360Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PortablePhotoStudio360Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360.framework; path = "Pods-PortablePhotoStudio360.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D600B91AFA3E196A1051700AFDF79138 /* Pods-PortablePhotoStudio360.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360.debug.xcconfig"; sourceTree = "<group>"; };
+		DDC922CE89ADF01B231FA8E47F9DAF12 /* Pods-PortablePhotoStudio360-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PortablePhotoStudio360-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC24409615A15274CB54EFE36DF8E5AD /* Pods-PortablePhotoStudio360Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PortablePhotoStudio360Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F7CE64D250A4F856876217F8BEEBEE8B /* PinLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A2D5E0E58FE8024271CB3C13E0DD34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DBE76BE50BF8BECF53127C60673CE8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56A02CA3BDDE38DD36CA4C5534D05B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B99352DCA6FECC9C55D8E0AA8753BB25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8BB0EC86E172083FE618F065592EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB49D3A218230DAC03F2ECCBA33D3CEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14ADB06CE83821814A6BB473D1550E74 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				813A8EAEFEC9355883B9A652D44E675B /* Pods-PortablePhotoStudio360 */,
+				96C007B6EF7D1EDBBB5DD073FC9EB503 /* Pods-PortablePhotoStudio360Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2C4F757DA2A698711368FB03DBC37A30 /* PinLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */,
+				091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */,
+				A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */,
+				C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */,
+				2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */,
+				75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */,
+				260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */,
+				BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */,
+				333291FC64460FC2017F37685AD18EEB /* Support Files */,
+			);
+			name = PinLayout;
+			path = PinLayout;
+			sourceTree = "<group>";
+		};
+		333291FC64460FC2017F37685AD18EEB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B6FD9FF7FB692799491D9AD9F63EF77 /* Info.plist */,
+				2103814D436913E69F0E46C7C1763CB1 /* PinLayout.modulemap */,
+				31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */,
+				BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */,
+				F7CE64D250A4F856876217F8BEEBEE8B /* PinLayout-prefix.pch */,
+				27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PinLayout";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CFCD473CB01CC1CD5E205AC0F8EC5CAD /* Pods */,
+				AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */,
+				14ADB06CE83821814A6BB473D1550E74 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		813A8EAEFEC9355883B9A652D44E675B /* Pods-PortablePhotoStudio360 */ = {
+			isa = PBXGroup;
+			children = (
+				BD093E54ED883D376535B43805354846 /* Info.plist */,
+				7C0745232FB69A049FD31FB867D955F1 /* Pods-PortablePhotoStudio360.modulemap */,
+				00E35F8801F835A77AE32E9B2777F411 /* Pods-PortablePhotoStudio360-acknowledgements.markdown */,
+				DDC922CE89ADF01B231FA8E47F9DAF12 /* Pods-PortablePhotoStudio360-acknowledgements.plist */,
+				0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */,
+				578A5ABE8071D103615434193280990C /* Pods-PortablePhotoStudio360-frameworks.sh */,
+				2A35D878AA2A2532CA715B2682C0A937 /* Pods-PortablePhotoStudio360-resources.sh */,
+				ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */,
+				D600B91AFA3E196A1051700AFDF79138 /* Pods-PortablePhotoStudio360.debug.xcconfig */,
+				8B3A4C8DD85EA57EC2025038F6833798 /* Pods-PortablePhotoStudio360.release.xcconfig */,
+			);
+			name = "Pods-PortablePhotoStudio360";
+			path = "Target Support Files/Pods-PortablePhotoStudio360";
+			sourceTree = "<group>";
+		};
+		96C007B6EF7D1EDBBB5DD073FC9EB503 /* Pods-PortablePhotoStudio360Tests */ = {
+			isa = PBXGroup;
+			children = (
+				89052D2690C4DE5C868888B145F22DED /* Info.plist */,
+				BAFA612AED639F2BBA656650B1C7AF44 /* Pods-PortablePhotoStudio360Tests.modulemap */,
+				D3F7F4B5F46787286D4D795E267136E7 /* Pods-PortablePhotoStudio360Tests-acknowledgements.markdown */,
+				EC24409615A15274CB54EFE36DF8E5AD /* Pods-PortablePhotoStudio360Tests-acknowledgements.plist */,
+				665E6168BEF1A757AA95E8E6A3FD490A /* Pods-PortablePhotoStudio360Tests-dummy.m */,
+				06CDB2BEBD4BDEA3FA021CE3D824A35C /* Pods-PortablePhotoStudio360Tests-frameworks.sh */,
+				8D1774F8299578D760391164937F0E2F /* Pods-PortablePhotoStudio360Tests-resources.sh */,
+				C0BCD6AAD9850FDBDFF9F36D0FE891A7 /* Pods-PortablePhotoStudio360Tests-umbrella.h */,
+				9300F7AD53899520CBD85F46B7CCD176 /* Pods-PortablePhotoStudio360Tests.debug.xcconfig */,
+				7917258A96306D7E2A9F6E09E35FF8DD /* Pods-PortablePhotoStudio360Tests.release.xcconfig */,
+			);
+			name = "Pods-PortablePhotoStudio360Tests";
+			path = "Target Support Files/Pods-PortablePhotoStudio360Tests";
+			sourceTree = "<group>";
+		};
+		AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */,
+				D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */,
+				C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFCD473CB01CC1CD5E205AC0F8EC5CAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F757DA2A698711368FB03DBC37A30 /* PinLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		08349A6A3629CA87C78DE7D1690EB2F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3DFE499EAEE6B939F6756AD49360EC /* PinLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9959374D7B44D14BFBA4C0772E1F6F1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC46351D900D2BC22977A4A4C6D7130 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA611472E4E53FC9015BB66EADC62B36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AEF823E94FC2144CEA820F6C4EC9CA /* Pods-PortablePhotoStudio360Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9EBE8218E313E5135EB1840ED206453B /* Pods-PortablePhotoStudio360Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333AE6BAC129901A02C317D4EA798148 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360Tests" */;
+			buildPhases = (
+				118220C894EE8AFB9A0D52934349CD58 /* Sources */,
+				5A2D5E0E58FE8024271CB3C13E0DD34C /* Frameworks */,
+				CA611472E4E53FC9015BB66EADC62B36 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PortablePhotoStudio360Tests";
+			productName = "Pods-PortablePhotoStudio360Tests";
+			productReference = C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9E2A98930563C34F961E35E6323CBE5 /* Pods-PortablePhotoStudio360 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F967151E381ECF2EC4A76117D540FEC7 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */;
+			buildPhases = (
+				2B6E049A1DF074C5AE4158FB21B7E0B3 /* Sources */,
+				C56A02CA3BDDE38DD36CA4C5534D05B3 /* Frameworks */,
+				9959374D7B44D14BFBA4C0772E1F6F1C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				084127B023D68F2C4D400D8159F22F17 /* PBXTargetDependency */,
+			);
+			name = "Pods-PortablePhotoStudio360";
+			productName = "Pods-PortablePhotoStudio360";
+			productReference = D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AE085BFE2BDEE2B71827B3001E7B283 /* Build configuration list for PBXNativeTarget "PinLayout" */;
+			buildPhases = (
+				693E35BECD65BD1C217F5DA2A1466358 /* Sources */,
+				EF8BB0EC86E172083FE618F065592EE9 /* Frameworks */,
+				08349A6A3629CA87C78DE7D1690EB2F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinLayout;
+			productName = PinLayout;
+			productReference = 0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */,
+				C9E2A98930563C34F961E35E6323CBE5 /* Pods-PortablePhotoStudio360 */,
+				9EBE8218E313E5135EB1840ED206453B /* Pods-PortablePhotoStudio360Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		118220C894EE8AFB9A0D52934349CD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F4A4402603B14F1E017C156E60AD56 /* Pods-PortablePhotoStudio360Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B6E049A1DF074C5AE4158FB21B7E0B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD02EA46E234EC3642A36D16B609F81 /* Pods-PortablePhotoStudio360-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		693E35BECD65BD1C217F5DA2A1466358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD319AA9A7671FA84805EEF8A5528F0D /* Coordinates.swift in Sources */,
+				FE7D1FEA3D601B3DE691C3215580831C /* PinLayout+Filters.swift in Sources */,
+				B5E7B006A006B0E5E120EEEB7AE3394A /* PinLayout-dummy.m in Sources */,
+				1D70367CCEA9719C58268068897B485C /* PinLayout.swift in Sources */,
+				12FD40F16072232CBCC96C0D53359EF6 /* PinLayoutImpl+Coordinates.swift in Sources */,
+				902C94675DA86921DAA95757825DB6F0 /* PinLayoutImpl+Relative.swift in Sources */,
+				97D5CC77541BF91AE7270CDF1D977023 /* PinLayoutImpl+Warning.swift in Sources */,
+				2E5327547ACF46A7FB70EAAA0F7EE993 /* PinLayoutImpl.swift in Sources */,
+				6A8CB8760A7567997F9BF32A212F44CB /* TypesImpl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		084127B023D68F2C4D400D8159F22F17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PinLayout;
+			target = DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */;
+			targetProxy = 172F3A25B7C19E3CF39A2EB38FA9360E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		027C710850C19DE8D470EA3E0B43BC25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D600B91AFA3E196A1051700AFDF79138 /* Pods-PortablePhotoStudio360.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PortablePhotoStudio360/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PortablePhotoStudio360/Pods-PortablePhotoStudio360.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PortablePhotoStudio360;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4E9CBEE867B068A52BE874120C572530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PinLayout/PinLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PinLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PinLayout/PinLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PinLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53668F93EFBCB60B51B037D34DC27997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PinLayout/PinLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PinLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PinLayout/PinLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PinLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6800C1EE4105EF38999DB44C8F8E6719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9300F7AD53899520CBD85F46B7CCD176 /* Pods-PortablePhotoStudio360Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PortablePhotoStudio360Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PortablePhotoStudio360Tests/Pods-PortablePhotoStudio360Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PortablePhotoStudio360Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84B8BA85856AADC51E997D699808AC86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3A4C8DD85EA57EC2025038F6833798 /* Pods-PortablePhotoStudio360.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PortablePhotoStudio360/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PortablePhotoStudio360/Pods-PortablePhotoStudio360.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PortablePhotoStudio360;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D817A13B69F4B0D2B8F6BDDA5AD65DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7917258A96306D7E2A9F6E09E35FF8DD /* Pods-PortablePhotoStudio360Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PortablePhotoStudio360Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PortablePhotoStudio360Tests/Pods-PortablePhotoStudio360Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PortablePhotoStudio360Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AE085BFE2BDEE2B71827B3001E7B283 /* Build configuration list for PBXNativeTarget "PinLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E9CBEE867B068A52BE874120C572530 /* Debug */,
+				53668F93EFBCB60B51B037D34DC27997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		333AE6BAC129901A02C317D4EA798148 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6800C1EE4105EF38999DB44C8F8E6719 /* Debug */,
+				D817A13B69F4B0D2B8F6BDDA5AD65DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F967151E381ECF2EC4A76117D540FEC7 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027C710850C19DE8D470EA3E0B43BC25 /* Debug */,
+				84B8BA85856AADC51E997D699808AC86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

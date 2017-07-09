@@ -1,0 +1,6 @@
+framework module Pods_PortablePhotoStudio360 {
+  umbrella header "Pods-PortablePhotoStudio360-umbrella.h"
+
+  export *
+  module * { export * }
+}
