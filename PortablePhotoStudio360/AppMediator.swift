@@ -14,6 +14,7 @@ class AppMediator: NSObject {
     
     init(withWindow window:UIWindow) {
         self.window = window
+        super.init()
     }
     
     func start() {
