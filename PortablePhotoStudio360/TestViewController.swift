@@ -23,7 +23,7 @@ class TestViewController: UIViewController {
             return height < maxHeight ? height : maxHeight
         }
     }
-    var peripherals = [AvailablePeripheralData]()
+    var peripherals = [UUID: AvailablePeripheralData]()
     let scanButton = UIButton()
     let peripheralList = UITableView()
     var bluetoothService:BluetoothCentralService?
@@ -87,9 +87,12 @@ extension TestViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PeripheralListCellReuseId, for: indexPath)
-        let inform = peripherals[indexPath.row]
-        cell.textLabel?.text = inform.peripheral.identifier.uuidString
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: PeripheralListCellReuseId)        
+        let uuid = Array(peripherals.keys)[indexPath.row]
+        let p = peripherals[uuid]?.peripheral
+        let name = p?.name
+        cell.textLabel?.text = name == nil ? "UnNamed" : name
+        cell.detailTextLabel?.text = p?.identifier.uuidString
         return cell
     }
 }
