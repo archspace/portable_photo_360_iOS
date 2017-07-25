@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum Route {
+    case BluetoothList
+}
+
 class AppMediator: NSObject {
     
     private let window:UIWindow
@@ -22,6 +26,17 @@ class AppMediator: NSObject {
         test.mediator = self
         window.rootViewController = test
         window.makeKeyAndVisible()
+    }
+    
+    func toRoute(route:Route, fromController controller:UIViewController) {
+        switch route {
+        case .BluetoothList:
+            let ble = BluListViewController()
+            ble.mediator = self
+            let navigation = UINavigationController(rootViewController: ble)
+            controller.present(navigation, animated: true, completion: nil)
+            break
+        }
     }
     
     func showAlert(message:String, onController controller:UIViewController) {
