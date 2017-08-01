@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 enum Route {
     case BluetoothList
@@ -16,15 +17,21 @@ class AppMediator: NSObject {
     
     private let window:UIWindow
     
+    let bleService:BluetoothCentralService
+    
     init(withWindow window:UIWindow) {
         self.window = window
+        bleService = BluetoothCentralService(withServices: [
+            CBUUID(string:"E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
+        ]) { (state) in
+            
+        }
         super.init()
     }
     
     func start() {
-        let test = TestViewController()
-        test.mediator = self
-        window.rootViewController = test
+        
+        
         window.makeKeyAndVisible()
     }
     

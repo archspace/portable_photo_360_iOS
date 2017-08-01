@@ -12,7 +12,7 @@ import CoreBluetooth
 
 class TestViewController: UIViewController {
     
-    weak var mediator:AppMediator?
+    weak var mediator:TestMediator?
     let PeripheralListCellReuseId = "PeripheralListCellReuseId"
     let PeriphearlListRowHeight:CGFloat = 44.0
     let PeriphearlListMaxVisibleRows = 3
@@ -31,7 +31,9 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        bluetoothService = BluetoothCentralService(withServices: []) {[unowned self](state) in
+        bluetoothService = BluetoothCentralService(withServices: [
+            CBUUID(string:"E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
+        ]) {[unowned self](state) in
             switch state {
             case .poweredOff:
                 self.mediator?.showAlert(message: "Bluetooth power off", onController: self)
