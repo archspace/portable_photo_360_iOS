@@ -13,6 +13,7 @@ import CoreBluetooth
 typealias CentralStateUpdateHandler = (CBManagerState)->Void
 typealias AvailablePeripheralData = (peripheral:CBPeripheral, advertisementData: [String : Any], rssi:NSNumber)
 typealias DiscoverPeripheralsDataHandler = ([UUID:AvailablePeripheralData])->Void
+typealias ConnectPeripheralHandler = (CBPeripheral)->Void
 
 class BluetoothCentralService: NSObject {
     
@@ -26,6 +27,7 @@ class BluetoothCentralService: NSObject {
     
     let stateUpdateHandler:CentralStateUpdateHandler
     var discoverPeripheralsHandler:DiscoverPeripheralsDataHandler?
+    var connectHandler:ConnectPeripheralHandler?
     
     let serviceUUIDs:[CBUUID]
     
@@ -42,6 +44,10 @@ class BluetoothCentralService: NSObject {
         centralManager?.scanForPeripherals(withServices: serviceUUIDs, options: nil)
     }
     
+    func connect(peripheral:CBPeripheral, handler:@escaping ConnectPeripheralHandler) {
+        centralManager?.connect(peripheral, options: nil)
+        connectHandler = handler
+    }
 }
 
 extension BluetoothCentralService: CBCentralManagerDelegate {
@@ -55,4 +61,10 @@ extension BluetoothCentralService: CBCentralManagerDelegate {
         availablePeripherals[peripheral.identifier] = data
         discoverPeripheralsHandler?(availablePeripherals)
     }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        peripheral.discoverServices(serviceUUIDs)
+        connectHandler?(peripheral)
+    }
 }
+
