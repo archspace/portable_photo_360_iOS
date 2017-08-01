@@ -13,6 +13,10 @@ enum Route {
     case BluetoothList
 }
 
+extension Notification.Name {
+    static let BLEStateChange = Notification.Name(rawValue: "BLEStateChange")
+}
+
 class AppMediator: NSObject {
     
     private let window:UIWindow
@@ -23,15 +27,16 @@ class AppMediator: NSObject {
         self.window = window
         bleService = BluetoothCentralService(withServices: [
             CBUUID(string:"E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
-        ]) { (state) in
-            
+        ]) {(state) in
+            NotificationCenter.default.post(name: .BLEStateChange, object: nil, userInfo: ["state": stat])
         }
         super.init()
     }
     
     func start() {
-        
-        
+        let photo = PhotoViewController()
+        photo.mediator = self
+        window.rootViewController = photo
         window.makeKeyAndVisible()
     }
     
