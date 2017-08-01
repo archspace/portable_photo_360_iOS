@@ -14,6 +14,7 @@
 		11E027DE1F121048009D56A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E027DD1F121048009D56A9 /* Assets.xcassets */; };
 		11E027E11F121048009D56A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E027DF1F121048009D56A9 /* LaunchScreen.storyboard */; };
 		11E027EC1F121048009D56A9 /* PortablePhotoStudio360Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E027EB1F121048009D56A9 /* PortablePhotoStudio360Tests.swift */; };
+		1F00F5901F27764700D44D20 /* BluListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00F58F1F27764700D44D20 /* BluListViewController.swift */; };
 		8D40C49ED95B343FE4FF10F1 /* Pods_PortablePhotoStudio360Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D877870F2951609746F79 /* Pods_PortablePhotoStudio360Tests.framework */; };
 		B615E895B8108ABA91A472D7 /* Pods_PortablePhotoStudio360.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E3B5ED4851BC22A90F9D02 /* Pods_PortablePhotoStudio360.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		11E027E71F121048009D56A9 /* PortablePhotoStudio360Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortablePhotoStudio360Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E027EB1F121048009D56A9 /* PortablePhotoStudio360Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortablePhotoStudio360Tests.swift; sourceTree = "<group>"; };
 		11E027ED1F121048009D56A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F00F58F1F27764700D44D20 /* BluListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluListViewController.swift; sourceTree = "<group>"; };
 		3F73B82747A22DB31C209125 /* Pods-PortablePhotoStudio360.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortablePhotoStudio360.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PortablePhotoStudio360/Pods-PortablePhotoStudio360.debug.xcconfig"; sourceTree = "<group>"; };
 		8715EE9ADE35584439B38C4A /* Pods-PortablePhotoStudio360Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortablePhotoStudio360Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PortablePhotoStudio360Tests/Pods-PortablePhotoStudio360Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8DF4BAD50A48752695CEF385 /* Pods-PortablePhotoStudio360Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortablePhotoStudio360Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PortablePhotoStudio360Tests/Pods-PortablePhotoStudio360Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		11E027D51F121048009D56A9 /* PortablePhotoStudio360 */ = {
 			isa = PBXGroup;
 			children = (
+				1FEE47191F2782F600E949F4 /* controllers */,
 				117BA80D1F1227CE0006541B /* services */,
 				117BA80A1F12113E0006541B /* mediators */,
 				11E027D61F121048009D56A9 /* AppDelegate.swift */,
@@ -125,6 +128,14 @@
 				11E027ED1F121048009D56A9 /* Info.plist */,
 			);
 			path = PortablePhotoStudio360Tests;
+			sourceTree = "<group>";
+		};
+		1FEE47191F2782F600E949F4 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F00F58F1F27764700D44D20 /* BluListViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 		225904C0A28D22D1AB96932E /* Pods */ = {
@@ -203,7 +214,7 @@
 				TargetAttributes = {
 					11E027D21F121048009D56A9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = NU3ZHCB55N;
+						DevelopmentTeam = 23DE5VKCGL;
 						ProvisioningStyle = Automatic;
 					};
 					11E027E61F121048009D56A9 = {
@@ -351,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				117BA80F1F1227F80006541B /* BluetoothService.swift in Sources */,
+				1F00F5901F27764700D44D20 /* BluListViewController.swift in Sources */,
 				117BA80C1F1211560006541B /* AppMediator.swift in Sources */,
 				11E027D91F121048009D56A9 /* TestViewController.swift in Sources */,
 				11E027D71F121048009D56A9 /* AppDelegate.swift in Sources */,
@@ -487,11 +499,13 @@
 			baseConfigurationReference = 3F73B82747A22DB31C209125 /* Pods-PortablePhotoStudio360.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NU3ZHCB55N;
+				DEVELOPMENT_TEAM = 23DE5VKCGL;
 				INFOPLIST_FILE = PortablePhotoStudio360/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaotang-chang.PortablePhotoStudio360";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.2;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -501,11 +515,13 @@
 			baseConfigurationReference = 11B1A6F4E6B3AE1E5472C0F5 /* Pods-PortablePhotoStudio360.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NU3ZHCB55N;
+				DEVELOPMENT_TEAM = 23DE5VKCGL;
 				INFOPLIST_FILE = PortablePhotoStudio360/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chaotang-chang.PortablePhotoStudio360";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.2;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

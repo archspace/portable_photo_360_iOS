@@ -25,6 +25,8 @@ class TestViewController: UIViewController {
     }
     var peripherals = [UUID: AvailablePeripheralData]()
     let scanButton = UIButton()
+    let titleTextView = UITextView()
+    
     let peripheralList = UITableView()
     var bluetoothService:BluetoothCentralService?
     
@@ -53,10 +55,16 @@ class TestViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mediator?.toRoute(route: .BluetoothList, fromController: self)
+    }
+    
     private func setupUI (){
         view.backgroundColor = UIColor.white
         view.addSubview(scanButton)
         view.addSubview(peripheralList)
+        view.addSubview(titleTextView)
         scanButton.setTitle("Scan", for: .normal)
         scanButton.setTitleColor(UIColor.blue, for: .normal)
         scanButton.isEnabled = false
@@ -93,7 +101,12 @@ extension TestViewController: UITableViewDataSource {
         let name = p?.name
         cell.textLabel?.text = name == nil ? "UnNamed" : name
         cell.detailTextLabel?.text = p?.identifier.uuidString
+//        cell.textLabel?.text =
         return cell
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         return "藍芽清單"
+    }
+    
 }
 
