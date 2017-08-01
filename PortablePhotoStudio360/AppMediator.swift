@@ -31,7 +31,7 @@ class AppMediator: NSObject {
     func toRoute(route:Route, fromController controller:UIViewController) {
         switch route {
         case .BluetoothList:
-            let ble = BluListViewController()
+            let ble = BLEListViewController()
             ble.mediator = self
             let navigation = UINavigationController(rootViewController: ble)
             controller.present(navigation, animated: true, completion: nil)

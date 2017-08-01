@@ -1,14 +1,16 @@
 //
-//  BluListViewController.swift
+//  BLEListViewController.swift
 //  PortablePhotoStudio360
 //
-//  Created by OSX9 on 2017/7/25.
+//  Created by ChangChao-Tang on 2017/8/1.
 //  Copyright © 2017年 ChangChao-Tang. All rights reserved.
 //
 
 import UIKit
 
-class BluListViewController: UIViewController {
+class BLEListViewController: UIViewController {
+    
+    var mediator: AppMediator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
