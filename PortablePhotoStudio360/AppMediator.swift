@@ -11,6 +11,7 @@ import CoreBluetooth
 
 enum Route {
     case BluetoothList
+    case Camera
 }
 
 extension Notification.Name {
@@ -22,31 +23,37 @@ class AppMediator: NSObject {
     private let window:UIWindow
     
     let bleService:BluetoothCentralService
+    let rootNavigation:UINavigationController
     
     init(withWindow window:UIWindow) {
         self.window = window
-        bleService = BluetoothCentralService(withServices: [
-            CBUUID(string:"E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
-        ]) {(state) in
+        bleService = BluetoothCentralService{(state) in
             NotificationCenter.default.post(name: .BLEStateChange, object: nil, userInfo: ["state": stat])
         }
+        let ble = BLEListViewController()
+        rootNavigation = UINavigationController(rootViewController: ble)
         super.init()
+        ble.mediator = self
     }
     
     func start() {
-        let photo = PhotoViewController()
-        photo.mediator = self
-        window.rootViewController = photo
+        window.rootViewController = rootNavigation
         window.makeKeyAndVisible()
     }
     
-    func toRoute(route:Route, fromController controller:UIViewController) {
+    func toRoute(route:Route, fromController controller:UIViewController?, userInfo: [AnyHashable: Any]?) {
         switch route {
         case .BluetoothList:
-            let ble = BLEListViewController()
-            ble.mediator = self
-            let navigation = UINavigationController(rootViewController: ble)
-            controller.present(navigation, animated: true, completion: nil)
+            rootNavigation.popToRootViewController(animated: true)
+            break
+        case .Camera:
+            guard let peripheral = userInfo?["periphera"] as? CBPeripheral else {
+                return
+            }
+            let photo = PhotoViewController()
+            photo.mediator = self
+            photo.peripheral = peripheral
+            rootNavigation.pushViewController(photo, animated: true)
             break
         }
     }
