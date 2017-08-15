@@ -8,7 +8,8 @@ target 'PortablePhotoStudio360' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   # Pods for PortablePhotoStudio360
-  pod 'PinLayout'
+  pod 'PinLayout', '~>1.1'
+  pod 'PromiseKit', '~>4.3'
 
   target 'PortablePhotoStudio360Tests' do
     inherit! :search_paths

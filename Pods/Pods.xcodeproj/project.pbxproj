@@ -7,75 +7,190 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FD40F16072232CBCC96C0D53359EF6 /* PinLayoutImpl+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */; };
-		1D70367CCEA9719C58268068897B485C /* PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */; };
-		2E5327547ACF46A7FB70EAAA0F7EE993 /* PinLayoutImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */; };
-		4AD02EA46E234EC3642A36D16B609F81 /* Pods-PortablePhotoStudio360-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */; };
-		51DBE76BE50BF8BECF53127C60673CE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		6A8CB8760A7567997F9BF32A212F44CB /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */; };
-		902C94675DA86921DAA95757825DB6F0 /* PinLayoutImpl+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */; };
-		97D5CC77541BF91AE7270CDF1D977023 /* PinLayoutImpl+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */; };
+		0380526831E8C4C9D9BEB0F85BF1774D /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E07F19358E133E1B5749D841753802 /* join.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0EFADCE655FAFF22F0145AAEC6C90782 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 970DE4E720FBCAA465370E9C3DBF6F11 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CFF63AEA42868CE8F5A21928C157A23 /* Zalgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E095AF31ED9ADD721640CC41A5182DB /* Zalgo.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E5076F251FD08E190DD3F97E8498A72 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D67B952F158BAC9FA3E27662055214 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		22B29C514723B688DE6273A581F06A87 /* PinLayout+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE58C3D147091461CAB49383FDDC81B /* PinLayout+Filters.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		22BAC84A2394CCF007C3DE6C0C36EE06 /* join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6A89AF8A149574C9BE991F7EA5AFA /* join.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2CC3DC3D58234A23A20D832FFBD76024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		2D4695DA19CEE61377172968AA0A96B3 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EFABE51B71A89054817314F7C73148D /* UIViewController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF31384CC432D4E840851C52250B0D /* UIViewController+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2FCADEAE764D56C7EC852CEC36FDF628 /* PinLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737DF45BD6F0F302E44D463AB30D174A /* PinLayout-dummy.m */; };
+		3187ED039DFF4B242F6F13D1A39AFCE4 /* PMKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6813D83886C569B7FF029DA2A35F6648 /* PMKAlertController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3649707066E496300FE33CC5061B31BC /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FE5A5F1BF6D8CD1C6AB9B55826D10C /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3715ED2EC0668DD9C498845765634330 /* wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B07E581D0AE514A8BE8C73C0E960261 /* wrap.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		404D600A45A028C1560BAF97BE10ACF2 /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C2997CB090B9CE97A1AD0BDA84E3944C /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4324BCA9CB4DAA8E495DAEDF1226CDBB /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CF25C8B0AF10F1B09A1F99129B3F5 /* NSObject+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4640643B074E3F0519E6BE04ED0F9789 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8CAF1649306EF9F6217D5EF104684F /* Coordinates.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		49D5FC365D09969F724965658D16E252 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 40774401EAFC2B2C42D290EFF97DCA34 /* dispatch_promise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		49DD19AF3D9AF96E4A3C659F2AEAD87D /* CALayer+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = AC906EA1D51E9451DC79EF7B955783B9 /* CALayer+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51DBE76BE50BF8BECF53127C60673CE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		525697DE0A71DB1A69F4179EF49370F7 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE86E7CC7D9B6A1432A9C8A9711FC4 /* NSNotificationCenter+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		53089D91455E5F7531DBDCA0A38893A3 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 55891DB445EEF96306DA00F6C618F34B /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		573C95F22D7FB8370F784A5AB49DF890 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B396E49829B06466840D2A66FD64C6 /* after.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5764F5D821B38B112174EEC013CFF179 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1DA71F3119484D3DF8AC6A10617BB /* UIViewController+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D52B6E879B0407CA8A2B09CECFCE0F8 /* PMKFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF6AF9DF1904AA5EC334185F30FC57A /* PMKFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68D9AA965B28F26A7E3BDF0B5985F43A /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = E42EF1D885F5D1B6B50E2FB86F65ED21 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		765A26A2FF9774EE1C9BBB6F3B4BF780 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5363C9528E627B0117AFB8FD6E56FA /* NSURLSession+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		768CE3AC5D1A170799BB0DC6D815BA81 /* PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5E3941BD4C9C15B73825AEF3E8E42C /* PinLayout.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		782F29F855C1943A24F4F9B53C8D6865 /* NSTask+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BE36BAC8C8EF30D93266C4D7EC7D42 /* NSTask+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7A68F62D499E0FFC9FA413EB82DC48D2 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6124E7A99712259E9BF2F8409D2E6 /* afterlife.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7EB77E96612B7DE5CEA8C19A1701529E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
+		807677B63249FE0EFB6A53FF2085A609 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA64048AD820F019B9E2AADB9B940AD /* race.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		80A2BFE7A8733740037F20250F74AB5E /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 95745AF6BCDC6103156C521B25FB862A /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83505D80E00DB5D1F886E6A10563636D /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B222BE503DA9432BACDBA4805BF41399 /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		874F17049E22A298B2B4D45DE64EB874 /* CALayer+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2EF46C73852A3547E4B1255191844 /* CALayer+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		890ABA470A56C59ABCC1EF5C6084AC28 /* URLDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664AECA2FD8910F26029667DABDCFDA /* URLDataPromise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		899C52223785161565174F00B79FE0A8 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1A7E47787227F53C7AAA2E1C8ACEA /* State.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8D7DA3391FCFA41CF109862D94E5A1A9 /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E059BB3F1CF48D8B6F6207CCCC3691 /* after.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		90A05B8E86C2F79A1279A5557FF4536D /* PinLayoutImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AFC7C8A210E9B85895239A48351667 /* PinLayoutImpl.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		90DBC011E8A299A8E8219FC3396AF5AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		94346CC628C47D5DB49D45AAC2D80898 /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB611099994E9A28C0231F0F131DF14 /* Process+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1A945B99971C76C14DB616138EA1EAC /* PinLayoutImpl+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37CECFE05481D5035EEEFA11736CA1 /* PinLayoutImpl+Relative.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A22C8C39E16B7B31D68317788C78ACD5 /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D88E65A40837B066C4EB2A5D344D4 /* UIView+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A2FC643235F03A2EA86F17613783E6EE /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98FDAC2A0C358E1F617E418A8A9C05B /* NSURLSession+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A495FB2C11BEBF4414370582A4BDF1D9 /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4AAB522694145F9B072B9648D5038 /* PromiseKit-dummy.m */; };
+		A7F72E2790A4F0BC49C018703FAD365E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67AEB9939D7F7D3322CCD8F0E6CC68 /* Error.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A9AEF823E94FC2144CEA820F6C4EC9CA /* Pods-PortablePhotoStudio360Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0BCD6AAD9850FDBDFF9F36D0FE891A7 /* Pods-PortablePhotoStudio360Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABC46351D900D2BC22977A4A4C6D7130 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5E7B006A006B0E5E120EEEB7AE3394A /* PinLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */; };
-		B99352DCA6FECC9C55D8E0AA8753BB25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BD319AA9A7671FA84805EEF8A5528F0D /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */; };
+		AA35E812FD86544973358F5B3C9E1361 /* PinLayoutImpl+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D09EC78863B6E6EF45FA32471467DA3 /* PinLayoutImpl+Coordinates.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AA7EF7109201C14FAA0E052599790C87 /* PMKQuartzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CEB70CE3EC555FDCB09BDF732176E6C /* PMKQuartzCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFC8DFAB1A6733DF9D6925EBCCB52F7D /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5090F70AF550BE719F7F1A48978AC2 /* when.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC2F04A39748C1F6CB2192F27E1BD4BF /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F797B77162C5BBE7C661E9FCCBD912CF /* NSNotificationCenter+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE89DBE79A722E1340B485BE3F0BEE5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		BF79CBAEC96D5D73A3FA2AA9EA4B8164 /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEC3FBE14A18318DCBA660119D049D /* TypesImpl.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C69784C3B28569485CF22A459899B979 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C5BFA3D8B79C6A05B2BF2BF765DE3A /* when.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C9C9376079F9EFE27C02A037D31997D0 /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8E1585B4E25E8304ACB1261F3F3E78 /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB792739019FE6BC23205CEE7E26C10D /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 54981AFD66B3F7AFD72FC80FBD25951D /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D33D0A6CAFD2092DB34A1EE2F89D6FD9 /* Promise+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71ED1A305C7AB03131738F6CE543D36 /* Promise+Properties.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D3A99402BD0ACCA0F4D9E53D2D52A08C /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = DF09E530200CB4BB6CF6A06D00C94CCE /* UIView+AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DCD6DC20A85914A20C3EB73F8868B847 /* Promise+AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBAB3D904A71D84D198CA7F857C981A /* Promise+AnyPromise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3BA70709180C43BA57EFD85EDE008C7 /* UIViewController+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = EB25914FD49D86AC7860FE46B42A90EE /* UIViewController+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7838B74332B2F84171414D5F60E328D /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 804A3C63FEC1F3014AFEBA1886F492CF /* GlobalState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E8F4A4402603B14F1E017C156E60AD56 /* Pods-PortablePhotoStudio360Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E6168BEF1A757AA95E8E6A3FD490A /* Pods-PortablePhotoStudio360Tests-dummy.m */; };
-		EB49D3A218230DAC03F2ECCBA33D3CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		EF3DFE499EAEE6B939F6756AD49360EC /* PinLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE7D1FEA3D601B3DE691C3215580831C /* PinLayout+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */; };
+		E9927959D07F3A33EA6A043855AA0FBF /* PinLayoutImpl+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA0A3B847B482AC0BC61C306DAF97F /* PinLayoutImpl+Warning.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E9D84C8C06F308A5AA1EA6E9E0260BA7 /* DispatchQueue+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1ECD164C6599F10268C935568A232 /* DispatchQueue+Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB49D3A218230DAC03F2ECCBA33D3CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		EF3DFE499EAEE6B939F6756AD49360EC /* PinLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D087498A7D5C30FEB1F9B7A8182D3348 /* PinLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0171F49970443C7BCFE31AC502BAF26 /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A22270FFCA743D97666F001B14C9F /* hang.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F172F3CE0CB12640F4CB4EAE9DE9238F /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07F0FA4E873B7755DF125459605425 /* AnyPromise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2569340D1FED2D78B9C4A9E43C435FD /* Pods-PortablePhotoStudio360-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */; };
+		FB1C7A21273DE099C29A6F29F77E9F59 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E20EB0CD8BBE7425CE90F78B4FC02A25 /* AnyPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		172F3A25B7C19E3CF39A2EB38FA9360E /* PBXContainerItemProxy */ = {
+		50DD10BA487A1219A6BE32A9CDC0DD5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DFC8F0BC2061F1B0118FCC32E4D2643A;
 			remoteInfo = PinLayout;
 		};
+		9347F74633DD17F560312592BF49A243 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC32048521BDD1E4879ED2D82A88B72;
+			remoteInfo = PromiseKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E059BB3F1CF48D8B6F6207CCCC3691 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
 		00E35F8801F835A77AE32E9B2777F411 /* Pods-PortablePhotoStudio360-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PortablePhotoStudio360-acknowledgements.markdown"; sourceTree = "<group>"; };
+		01AFC7C8A210E9B85895239A48351667 /* PinLayoutImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayoutImpl.swift; path = Sources/PinLayoutImpl.swift; sourceTree = "<group>"; };
+		01C5BFA3D8B79C6A05B2BF2BF765DE3A /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
 		06CDB2BEBD4BDEA3FA021CE3D824A35C /* Pods-PortablePhotoStudio360Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360Tests-frameworks.sh"; sourceTree = "<group>"; };
-		091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayout.swift; path = Sources/PinLayout.swift; sourceTree = "<group>"; };
-		0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PinLayout.framework; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E316666F58AD5DFAB6A4369BF732E7D /* Pods-PortablePhotoStudio360-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PortablePhotoStudio360-dummy.m"; sourceTree = "<group>"; };
-		2103814D436913E69F0E46C7C1763CB1 /* PinLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PinLayout.modulemap; sourceTree = "<group>"; };
-		260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Warning.swift"; path = "Sources/PinLayoutImpl+Warning.swift"; sourceTree = "<group>"; };
-		27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-umbrella.h"; sourceTree = "<group>"; };
+		0EAEC3FBE14A18318DCBA660119D049D /* TypesImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypesImpl.swift; path = Sources/TypesImpl.swift; sourceTree = "<group>"; };
+		1CF6AF9DF1904AA5EC334185F30FC57A /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
+		1D09EC78863B6E6EF45FA32471467DA3 /* PinLayoutImpl+Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Coordinates.swift"; path = "Sources/PinLayoutImpl+Coordinates.swift"; sourceTree = "<group>"; };
+		1F10F92DD300BF97E1C2F6A51EE917FE /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PinLayout.framework; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F67AEB9939D7F7D3322CCD8F0E6CC68 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		20E07F19358E133E1B5749D841753802 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
+		21BE36BAC8C8EF30D93266C4D7EC7D42 /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
+		2A07F0FA4E873B7755DF125459605425 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
 		2A35D878AA2A2532CA715B2682C0A937 /* Pods-PortablePhotoStudio360-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360-resources.sh"; sourceTree = "<group>"; };
-		2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Coordinates.swift"; path = "Sources/PinLayoutImpl+Coordinates.swift"; sourceTree = "<group>"; };
-		31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PinLayout.xcconfig; sourceTree = "<group>"; };
-		4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinates.swift; path = Sources/Coordinates.swift; sourceTree = "<group>"; };
+		2B0C69BD98F5B6B6146BCB4A4D2192AD /* Pods_PortablePhotoStudio360Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360Tests.framework; path = "Pods-PortablePhotoStudio360Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB611099994E9A28C0231F0F131DF14 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
+		2CC2EF46C73852A3547E4B1255191844 /* CALayer+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+AnyPromise.m"; path = "Extensions/QuartzCore/Sources/CALayer+AnyPromise.m"; sourceTree = "<group>"; };
+		2E5E3941BD4C9C15B73825AEF3E8E42C /* PinLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayout.swift; path = Sources/PinLayout.swift; sourceTree = "<group>"; };
+		2EF6A89AF8A149574C9BE991F7EA5AFA /* join.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = join.swift; path = Sources/join.swift; sourceTree = "<group>"; };
+		324A22270FFCA743D97666F001B14C9F /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
+		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3A5363C9528E627B0117AFB8FD6E56FA /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
+		40774401EAFC2B2C42D290EFF97DCA34 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
+		40D67B952F158BAC9FA3E27662055214 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
+		512D88E65A40837B066C4EB2A5D344D4 /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Extensions/UIKit/Sources/UIView+Promise.swift"; sourceTree = "<group>"; };
+		54981AFD66B3F7AFD72FC80FBD25951D /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
+		54FF31384CC432D4E840851C52250B0D /* UIViewController+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Promise.swift"; path = "Extensions/UIKit/Sources/UIViewController+Promise.swift"; sourceTree = "<group>"; };
+		55891DB445EEF96306DA00F6C618F34B /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
 		578A5ABE8071D103615434193280990C /* Pods-PortablePhotoStudio360-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360-frameworks.sh"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5B07E581D0AE514A8BE8C73C0E960261 /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
+		5CEB70CE3EC555FDCB09BDF732176E6C /* PMKQuartzCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKQuartzCore.h; path = Extensions/QuartzCore/Sources/PMKQuartzCore.h; sourceTree = "<group>"; };
+		64593DEA223E8316C58C58419A105104 /* PinLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PinLayout.xcconfig; sourceTree = "<group>"; };
 		665E6168BEF1A757AA95E8E6A3FD490A /* Pods-PortablePhotoStudio360Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PortablePhotoStudio360Tests-dummy.m"; sourceTree = "<group>"; };
-		75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Relative.swift"; path = "Sources/PinLayoutImpl+Relative.swift"; sourceTree = "<group>"; };
+		6664AECA2FD8910F26029667DABDCFDA /* URLDataPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLDataPromise.swift; path = Extensions/Foundation/Sources/URLDataPromise.swift; sourceTree = "<group>"; };
+		66AA0A3B847B482AC0BC61C306DAF97F /* PinLayoutImpl+Warning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Warning.swift"; path = "Sources/PinLayoutImpl+Warning.swift"; sourceTree = "<group>"; };
+		6813D83886C569B7FF029DA2A35F6648 /* PMKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Extensions/UIKit/Sources/PMKAlertController.swift; sourceTree = "<group>"; };
+		6C8CAF1649306EF9F6217D5EF104684F /* Coordinates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinates.swift; path = Sources/Coordinates.swift; sourceTree = "<group>"; };
+		6E16FE246207E2FAE6A579A901AD94AA /* PinLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PinLayout.modulemap; sourceTree = "<group>"; };
+		737DF45BD6F0F302E44D463AB30D174A /* PinLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PinLayout-dummy.m"; sourceTree = "<group>"; };
+		73C0144236586CC98375816C4AF0EE70 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		74FE5A5F1BF6D8CD1C6AB9B55826D10C /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
 		7917258A96306D7E2A9F6E09E35FF8DD /* Pods-PortablePhotoStudio360Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7C0745232FB69A049FD31FB867D955F1 /* Pods-PortablePhotoStudio360.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PortablePhotoStudio360.modulemap"; sourceTree = "<group>"; };
+		7E095AF31ED9ADD721640CC41A5182DB /* Zalgo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zalgo.swift; path = Sources/Zalgo.swift; sourceTree = "<group>"; };
+		804A3C63FEC1F3014AFEBA1886F492CF /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
 		89052D2690C4DE5C868888B145F22DED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB66182264398FCB791D1FF0ECF33E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B3A4C8DD85EA57EC2025038F6833798 /* Pods-PortablePhotoStudio360.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360.release.xcconfig"; sourceTree = "<group>"; };
 		8D1774F8299578D760391164937F0E2F /* Pods-PortablePhotoStudio360Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PortablePhotoStudio360Tests-resources.sh"; sourceTree = "<group>"; };
+		8F37CECFE05481D5035EEEFA11736CA1 /* PinLayoutImpl+Relative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayoutImpl+Relative.swift"; path = "Sources/PinLayoutImpl+Relative.swift"; sourceTree = "<group>"; };
 		9300F7AD53899520CBD85F46B7CCD176 /* Pods-PortablePhotoStudio360Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B6FD9FF7FB692799491D9AD9F63EF77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayout+Filters.swift"; path = "Sources/PinLayout+Filters.swift"; sourceTree = "<group>"; };
+		95745AF6BCDC6103156C521B25FB862A /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
+		970DE4E720FBCAA465370E9C3DBF6F11 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
+		9EBAB3D904A71D84D198CA7F857C981A /* Promise+AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+AnyPromise.swift"; path = "Sources/Promise+AnyPromise.swift"; sourceTree = "<group>"; };
+		A7B4AAB522694145F9B072B9648D5038 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		A7EB858B41662F14834C31D3BA44FDDA /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
+		AC906EA1D51E9451DC79EF7B955783B9 /* CALayer+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+AnyPromise.h"; path = "Extensions/QuartzCore/Sources/CALayer+AnyPromise.h"; sourceTree = "<group>"; };
 		ACD436280657AE1CDC050EF088A60DFF /* Pods-PortablePhotoStudio360-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PortablePhotoStudio360-umbrella.h"; sourceTree = "<group>"; };
+		B222BE503DA9432BACDBA4805BF41399 /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
+		B7B1A7E47787227F53C7AAA2E1C8ACEA /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		B9B396E49829B06466840D2A66FD64C6 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
+		BAEE86E7CC7D9B6A1432A9C8A9711FC4 /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
 		BAFA612AED639F2BBA656650B1C7AF44 /* Pods-PortablePhotoStudio360Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PortablePhotoStudio360Tests.modulemap"; sourceTree = "<group>"; };
-		BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypesImpl.swift; path = Sources/TypesImpl.swift; sourceTree = "<group>"; };
 		BD093E54ED883D376535B43805354846 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PinLayout-dummy.m"; sourceTree = "<group>"; };
+		BDE58C3D147091461CAB49383FDDC81B /* PinLayout+Filters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayout+Filters.swift"; path = "Sources/PinLayout+Filters.swift"; sourceTree = "<group>"; };
+		BF709AFFD534ADC043FA5F294EA7E03E /* PinLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-prefix.pch"; sourceTree = "<group>"; };
 		C0BCD6AAD9850FDBDFF9F36D0FE891A7 /* Pods-PortablePhotoStudio360Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PortablePhotoStudio360Tests-umbrella.h"; sourceTree = "<group>"; };
-		C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinLayoutImpl.swift; path = Sources/PinLayoutImpl.swift; sourceTree = "<group>"; };
-		C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360Tests.framework; path = "Pods-PortablePhotoStudio360Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2053E723D407746DF1A98F37D1030DB /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2997CB090B9CE97A1AD0BDA84E3944C /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
+		CAF6124E7A99712259E9BF2F8409D2E6 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
+		D087498A7D5C30FEB1F9B7A8182D3348 /* PinLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-umbrella.h"; sourceTree = "<group>"; };
+		D1A1ECD164C6599F10268C935568A232 /* DispatchQueue+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Promise.swift"; path = "Sources/DispatchQueue+Promise.swift"; sourceTree = "<group>"; };
 		D3F7F4B5F46787286D4D795E267136E7 /* Pods-PortablePhotoStudio360Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PortablePhotoStudio360Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360.framework; path = "Pods-PortablePhotoStudio360.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D600B91AFA3E196A1051700AFDF79138 /* Pods-PortablePhotoStudio360.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PortablePhotoStudio360.debug.xcconfig"; sourceTree = "<group>"; };
+		D86373A03D35E509B01F0120E2BB2163 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98FDAC2A0C358E1F617E418A8A9C05B /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
+		DBF1DA71F3119484D3DF8AC6A10617BB /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
+		DDA64048AD820F019B9E2AADB9B940AD /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
 		DDC922CE89ADF01B231FA8E47F9DAF12 /* Pods-PortablePhotoStudio360-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PortablePhotoStudio360-acknowledgements.plist"; sourceTree = "<group>"; };
+		DF09E530200CB4BB6CF6A06D00C94CCE /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
+		E18760C0DD90C434905E1A436D216E65 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		E20EB0CD8BBE7425CE90F78B4FC02A25 /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
+		E42EF1D885F5D1B6B50E2FB86F65ED21 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
+		E71ED1A305C7AB03131738F6CE543D36 /* Promise+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Properties.swift"; path = "Sources/Promise+Properties.swift"; sourceTree = "<group>"; };
+		E93CF25C8B0AF10F1B09A1F99129B3F5 /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
+		EAD0AFD4061FAA27FE05C35F0784F020 /* Pods_PortablePhotoStudio360.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PortablePhotoStudio360.framework; path = "Pods-PortablePhotoStudio360.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB25914FD49D86AC7860FE46B42A90EE /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
 		EC24409615A15274CB54EFE36DF8E5AD /* Pods-PortablePhotoStudio360Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PortablePhotoStudio360Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F7CE64D250A4F856876217F8BEEBEE8B /* PinLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinLayout-prefix.pch"; sourceTree = "<group>"; };
+		ED5090F70AF550BE719F7F1A48978AC2 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
+		ED8E1585B4E25E8304ACB1261F3F3E78 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
+		F797B77162C5BBE7C661E9FCCBD912CF /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
+		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +202,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C56A02CA3BDDE38DD36CA4C5534D05B3 /* Frameworks */ = {
+		942C46CBB70AAC73DF3553FD36DB3F2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99352DCA6FECC9C55D8E0AA8753BB25 /* Foundation.framework in Frameworks */,
+				2CC3DC3D58234A23A20D832FFBD76024 /* Foundation.framework in Frameworks */,
+				7EB77E96612B7DE5CEA8C19A1701529E /* QuartzCore.framework in Frameworks */,
+				BE89DBE79A722E1340B485BE3F0BEE5F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3D1AC998C446B14D9035F206F8B8FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90DBC011E8A299A8E8219FC3396AF5AC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +231,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		14ADB06CE83821814A6BB473D1550E74 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,44 +248,112 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2C4F757DA2A698711368FB03DBC37A30 /* PinLayout */ = {
+		192F7E3A83617BB67A962F3567E5C33A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A259B3F8F32E0C96FCAF1F8BCC7CD97 /* Coordinates.swift */,
-				091500C64AD5552E597EC9ADBB76B277 /* PinLayout.swift */,
-				A8BBD680CDD3CFF930D05175CB01D557 /* PinLayout+Filters.swift */,
-				C3D86E43C3CED7A55FCD3B102BD52452 /* PinLayoutImpl.swift */,
-				2F7A56BDE120931A7DDA2F578A7A864E /* PinLayoutImpl+Coordinates.swift */,
-				75979212C196D8A9C5DADA0A4691DFAF /* PinLayoutImpl+Relative.swift */,
-				260B4AE2D1B09A597375801B6A321449 /* PinLayoutImpl+Warning.swift */,
-				BCDDD9A626651E96CEDB19BDC49A4B5A /* TypesImpl.swift */,
-				333291FC64460FC2017F37685AD18EEB /* Support Files */,
+				D86373A03D35E509B01F0120E2BB2163 /* Info.plist */,
+				E18760C0DD90C434905E1A436D216E65 /* PromiseKit.modulemap */,
+				73C0144236586CC98375816C4AF0EE70 /* PromiseKit.xcconfig */,
+				A7B4AAB522694145F9B072B9648D5038 /* PromiseKit-dummy.m */,
+				A7EB858B41662F14834C31D3BA44FDDA /* PromiseKit-prefix.pch */,
+				74FE5A5F1BF6D8CD1C6AB9B55826D10C /* PromiseKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PromiseKit";
+			sourceTree = "<group>";
+		};
+		35355F965A7E3781279CA8EF18799371 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7633095DC00BD02E99074F6D7A3D6636 /* PinLayout */,
+				5957DEEFA0AD7B711FF796417C985029 /* PromiseKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4444F1373C67E3B61ADBDB13A2C5352C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6813D83886C569B7FF029DA2A35F6648 /* PMKAlertController.swift */,
+				970DE4E720FBCAA465370E9C3DBF6F11 /* PMKUIKit.h */,
+				E42EF1D885F5D1B6B50E2FB86F65ED21 /* UIView+AnyPromise.h */,
+				DF09E530200CB4BB6CF6A06D00C94CCE /* UIView+AnyPromise.m */,
+				512D88E65A40837B066C4EB2A5D344D4 /* UIView+Promise.swift */,
+				EB25914FD49D86AC7860FE46B42A90EE /* UIViewController+AnyPromise.h */,
+				DBF1DA71F3119484D3DF8AC6A10617BB /* UIViewController+AnyPromise.m */,
+				54FF31384CC432D4E840851C52250B0D /* UIViewController+Promise.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		5957DEEFA0AD7B711FF796417C985029 /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				DAA054BFD8763B2774263C18D670C21C /* CorePromise */,
+				5E4C4922351454605FB68DCB522F1728 /* Foundation */,
+				978E58EE62BC675780E574C5C6F613FA /* QuartzCore */,
+				192F7E3A83617BB67A962F3567E5C33A /* Support Files */,
+				4444F1373C67E3B61ADBDB13A2C5352C /* UIKit */,
+			);
+			name = PromiseKit;
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		5E4C4922351454605FB68DCB522F1728 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				CAF6124E7A99712259E9BF2F8409D2E6 /* afterlife.swift */,
+				ED8E1585B4E25E8304ACB1261F3F3E78 /* NSNotificationCenter+AnyPromise.h */,
+				BAEE86E7CC7D9B6A1432A9C8A9711FC4 /* NSNotificationCenter+AnyPromise.m */,
+				F797B77162C5BBE7C661E9FCCBD912CF /* NSNotificationCenter+Promise.swift */,
+				E93CF25C8B0AF10F1B09A1F99129B3F5 /* NSObject+Promise.swift */,
+				55891DB445EEF96306DA00F6C618F34B /* NSTask+AnyPromise.h */,
+				21BE36BAC8C8EF30D93266C4D7EC7D42 /* NSTask+AnyPromise.m */,
+				B222BE503DA9432BACDBA4805BF41399 /* NSURLSession+AnyPromise.h */,
+				3A5363C9528E627B0117AFB8FD6E56FA /* NSURLSession+AnyPromise.m */,
+				D98FDAC2A0C358E1F617E418A8A9C05B /* NSURLSession+Promise.swift */,
+				1CF6AF9DF1904AA5EC334185F30FC57A /* PMKFoundation.h */,
+				2BB611099994E9A28C0231F0F131DF14 /* Process+Promise.swift */,
+				6664AECA2FD8910F26029667DABDCFDA /* URLDataPromise.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		7633095DC00BD02E99074F6D7A3D6636 /* PinLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C8CAF1649306EF9F6217D5EF104684F /* Coordinates.swift */,
+				2E5E3941BD4C9C15B73825AEF3E8E42C /* PinLayout.swift */,
+				BDE58C3D147091461CAB49383FDDC81B /* PinLayout+Filters.swift */,
+				01AFC7C8A210E9B85895239A48351667 /* PinLayoutImpl.swift */,
+				1D09EC78863B6E6EF45FA32471467DA3 /* PinLayoutImpl+Coordinates.swift */,
+				8F37CECFE05481D5035EEEFA11736CA1 /* PinLayoutImpl+Relative.swift */,
+				66AA0A3B847B482AC0BC61C306DAF97F /* PinLayoutImpl+Warning.swift */,
+				0EAEC3FBE14A18318DCBA660119D049D /* TypesImpl.swift */,
+				E34A4BA39129CA14103E98FC5CBB31A3 /* Support Files */,
 			);
 			name = PinLayout;
 			path = PinLayout;
 			sourceTree = "<group>";
 		};
-		333291FC64460FC2017F37685AD18EEB /* Support Files */ = {
+		78E4D58CFD09F8AC362A64D10529DDB1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B6FD9FF7FB692799491D9AD9F63EF77 /* Info.plist */,
-				2103814D436913E69F0E46C7C1763CB1 /* PinLayout.modulemap */,
-				31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */,
-				BE6C753818F6DA00FE764CE2455EED12 /* PinLayout-dummy.m */,
-				F7CE64D250A4F856876217F8BEEBEE8B /* PinLayout-prefix.pch */,
-				27116552483DAE584DC6EE4D8DCF8910 /* PinLayout-umbrella.h */,
+				1F10F92DD300BF97E1C2F6A51EE917FE /* PinLayout.framework */,
+				EAD0AFD4061FAA27FE05C35F0784F020 /* Pods_PortablePhotoStudio360.framework */,
+				2B0C69BD98F5B6B6146BCB4A4D2192AD /* Pods_PortablePhotoStudio360Tests.framework */,
+				C2053E723D407746DF1A98F37D1030DB /* PromiseKit.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/PinLayout";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				CFCD473CB01CC1CD5E205AC0F8EC5CAD /* Pods */,
-				AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				35355F965A7E3781279CA8EF18799371 /* Pods */,
+				78E4D58CFD09F8AC362A64D10529DDB1 /* Products */,
 				14ADB06CE83821814A6BB473D1550E74 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -175,6 +376,16 @@
 			path = "Target Support Files/Pods-PortablePhotoStudio360";
 			sourceTree = "<group>";
 		};
+		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */,
+				FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */,
+				3917A50EB224EEDBC66971700D698782 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		96C007B6EF7D1EDBBB5DD073FC9EB503 /* Pods-PortablePhotoStudio360Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,38 +404,58 @@
 			path = "Target Support Files/Pods-PortablePhotoStudio360Tests";
 			sourceTree = "<group>";
 		};
-		AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */ = {
+		978E58EE62BC675780E574C5C6F613FA /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
-				0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */,
-				D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */,
-				C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */,
+				AC906EA1D51E9451DC79EF7B955783B9 /* CALayer+AnyPromise.h */,
+				2CC2EF46C73852A3547E4B1255191844 /* CALayer+AnyPromise.m */,
+				5CEB70CE3EC555FDCB09BDF732176E6C /* PMKQuartzCore.h */,
 			);
-			name = Products;
+			name = QuartzCore;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		DAA054BFD8763B2774263C18D670C21C /* CorePromise */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				00E059BB3F1CF48D8B6F6207CCCC3691 /* after.m */,
+				B9B396E49829B06466840D2A66FD64C6 /* after.swift */,
+				54981AFD66B3F7AFD72FC80FBD25951D /* AnyPromise.h */,
+				E20EB0CD8BBE7425CE90F78B4FC02A25 /* AnyPromise.m */,
+				2A07F0FA4E873B7755DF125459605425 /* AnyPromise.swift */,
+				40774401EAFC2B2C42D290EFF97DCA34 /* dispatch_promise.m */,
+				D1A1ECD164C6599F10268C935568A232 /* DispatchQueue+Promise.swift */,
+				1F67AEB9939D7F7D3322CCD8F0E6CC68 /* Error.swift */,
+				95745AF6BCDC6103156C521B25FB862A /* fwd.h */,
+				804A3C63FEC1F3014AFEBA1886F492CF /* GlobalState.m */,
+				324A22270FFCA743D97666F001B14C9F /* hang.m */,
+				20E07F19358E133E1B5749D841753802 /* join.m */,
+				2EF6A89AF8A149574C9BE991F7EA5AFA /* join.swift */,
+				40D67B952F158BAC9FA3E27662055214 /* Promise.swift */,
+				9EBAB3D904A71D84D198CA7F857C981A /* Promise+AnyPromise.swift */,
+				E71ED1A305C7AB03131738F6CE543D36 /* Promise+Properties.swift */,
+				C2997CB090B9CE97A1AD0BDA84E3944C /* PromiseKit.h */,
+				DDA64048AD820F019B9E2AADB9B940AD /* race.swift */,
+				B7B1A7E47787227F53C7AAA2E1C8ACEA /* State.swift */,
+				ED5090F70AF550BE719F7F1A48978AC2 /* when.m */,
+				01C5BFA3D8B79C6A05B2BF2BF765DE3A /* when.swift */,
+				5B07E581D0AE514A8BE8C73C0E960261 /* wrap.swift */,
+				7E095AF31ED9ADD721640CC41A5182DB /* Zalgo.swift */,
 			);
-			name = Frameworks;
+			name = CorePromise;
 			sourceTree = "<group>";
 		};
-		CFCD473CB01CC1CD5E205AC0F8EC5CAD /* Pods */ = {
+		E34A4BA39129CA14103E98FC5CBB31A3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C4F757DA2A698711368FB03DBC37A30 /* PinLayout */,
+				8AB66182264398FCB791D1FF0ECF33E0 /* Info.plist */,
+				6E16FE246207E2FAE6A579A901AD94AA /* PinLayout.modulemap */,
+				64593DEA223E8316C58C58419A105104 /* PinLayout.xcconfig */,
+				737DF45BD6F0F302E44D463AB30D174A /* PinLayout-dummy.m */,
+				BF709AFFD534ADC043FA5F294EA7E03E /* PinLayout-prefix.pch */,
+				D087498A7D5C30FEB1F9B7A8182D3348 /* PinLayout-umbrella.h */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/PinLayout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +469,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9959374D7B44D14BFBA4C0772E1F6F1C /* Headers */ = {
+		267A8FECF5B2DF604126F252489B2731 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC46351D900D2BC22977A4A4C6D7130 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */,
+				CB792739019FE6BC23205CEE7E26C10D /* AnyPromise.h in Headers */,
+				49DD19AF3D9AF96E4A3C659F2AEAD87D /* CALayer+AnyPromise.h in Headers */,
+				80A2BFE7A8733740037F20250F74AB5E /* fwd.h in Headers */,
+				C9C9376079F9EFE27C02A037D31997D0 /* NSNotificationCenter+AnyPromise.h in Headers */,
+				53089D91455E5F7531DBDCA0A38893A3 /* NSTask+AnyPromise.h in Headers */,
+				83505D80E00DB5D1F886E6A10563636D /* NSURLSession+AnyPromise.h in Headers */,
+				5D52B6E879B0407CA8A2B09CECFCE0F8 /* PMKFoundation.h in Headers */,
+				AA7EF7109201C14FAA0E052599790C87 /* PMKQuartzCore.h in Headers */,
+				0EFADCE655FAFF22F0145AAEC6C90782 /* PMKUIKit.h in Headers */,
+				3649707066E496300FE33CC5061B31BC /* PromiseKit-umbrella.h in Headers */,
+				404D600A45A028C1560BAF97BE10ACF2 /* PromiseKit.h in Headers */,
+				68D9AA965B28F26A7E3BDF0B5985F43A /* UIView+AnyPromise.h in Headers */,
+				E3BA70709180C43BA57EFD85EDE008C7 /* UIViewController+AnyPromise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +494,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9AEF823E94FC2144CEA820F6C4EC9CA /* Pods-PortablePhotoStudio360Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1A6DED2E6D511941CB7D95D23ECF228 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D4695DA19CEE61377172968AA0A96B3 /* Pods-PortablePhotoStudio360-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,32 +522,50 @@
 			);
 			name = "Pods-PortablePhotoStudio360Tests";
 			productName = "Pods-PortablePhotoStudio360Tests";
-			productReference = C758295858765ECFCF2A1B44E15650C8 /* Pods_PortablePhotoStudio360Tests.framework */;
+			productReference = 2B0C69BD98F5B6B6146BCB4A4D2192AD /* Pods_PortablePhotoStudio360Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C9E2A98930563C34F961E35E6323CBE5 /* Pods-PortablePhotoStudio360 */ = {
+		ADF443FE06B5CFB195884258213921FB /* Pods-PortablePhotoStudio360 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F967151E381ECF2EC4A76117D540FEC7 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */;
+			buildConfigurationList = E51DB21F9BA27B9365E044182B1797B4 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */;
 			buildPhases = (
-				2B6E049A1DF074C5AE4158FB21B7E0B3 /* Sources */,
-				C56A02CA3BDDE38DD36CA4C5534D05B3 /* Frameworks */,
-				9959374D7B44D14BFBA4C0772E1F6F1C /* Headers */,
+				0700B54B1BF8DAE3CBA33CBFC3F15F28 /* Sources */,
+				DF3D1AC998C446B14D9035F206F8B8FF /* Frameworks */,
+				E1A6DED2E6D511941CB7D95D23ECF228 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				084127B023D68F2C4D400D8159F22F17 /* PBXTargetDependency */,
+				EC536CA5960DE6D381EAE3654D1B4CE6 /* PBXTargetDependency */,
+				EDE69E42CC4FBE573E13413BBE1BBA44 /* PBXTargetDependency */,
 			);
 			name = "Pods-PortablePhotoStudio360";
 			productName = "Pods-PortablePhotoStudio360";
-			productReference = D41AAF7006E12CC8FC1D7CCA218AC901 /* Pods_PortablePhotoStudio360.framework */;
+			productReference = EAD0AFD4061FAA27FE05C35F0784F020 /* Pods_PortablePhotoStudio360.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AEC32048521BDD1E4879ED2D82A88B72 /* PromiseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4508000CE7C77B63D6C8670F96B68E76 /* Build configuration list for PBXNativeTarget "PromiseKit" */;
+			buildPhases = (
+				43A9184BF36C6113B8C423BB7EF93AD1 /* Sources */,
+				942C46CBB70AAC73DF3553FD36DB3F2D /* Frameworks */,
+				267A8FECF5B2DF604126F252489B2731 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PromiseKit;
+			productName = PromiseKit;
+			productReference = C2053E723D407746DF1A98F37D1030DB /* PromiseKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AE085BFE2BDEE2B71827B3001E7B283 /* Build configuration list for PBXNativeTarget "PinLayout" */;
 			buildPhases = (
-				693E35BECD65BD1C217F5DA2A1466358 /* Sources */,
+				6CBED43D8708BCEA92AE35C5D5D5491B /* Sources */,
 				EF8BB0EC86E172083FE618F065592EE9 /* Frameworks */,
 				08349A6A3629CA87C78DE7D1690EB2F0 /* Headers */,
 			);
@@ -306,7 +575,7 @@
 			);
 			name = PinLayout;
 			productName = PinLayout;
-			productReference = 0D9B8EA9C80FBF6C9A34CE70E80BF281 /* PinLayout.framework */;
+			productReference = 1F10F92DD300BF97E1C2F6A51EE917FE /* PinLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -326,18 +595,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AFF8F9ED0EC602B440AB60D7C2B24F22 /* Products */;
+			productRefGroup = 78E4D58CFD09F8AC362A64D10529DDB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */,
-				C9E2A98930563C34F961E35E6323CBE5 /* Pods-PortablePhotoStudio360 */,
+				ADF443FE06B5CFB195884258213921FB /* Pods-PortablePhotoStudio360 */,
 				9EBE8218E313E5135EB1840ED206453B /* Pods-PortablePhotoStudio360Tests */,
+				AEC32048521BDD1E4879ED2D82A88B72 /* PromiseKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0700B54B1BF8DAE3CBA33CBFC3F15F28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2569340D1FED2D78B9C4A9E43C435FD /* Pods-PortablePhotoStudio360-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		118220C894EE8AFB9A0D52934349CD58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,43 +624,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B6E049A1DF074C5AE4158FB21B7E0B3 /* Sources */ = {
+		43A9184BF36C6113B8C423BB7EF93AD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AD02EA46E234EC3642A36D16B609F81 /* Pods-PortablePhotoStudio360-dummy.m in Sources */,
+				8D7DA3391FCFA41CF109862D94E5A1A9 /* after.m in Sources */,
+				573C95F22D7FB8370F784A5AB49DF890 /* after.swift in Sources */,
+				7A68F62D499E0FFC9FA413EB82DC48D2 /* afterlife.swift in Sources */,
+				FB1C7A21273DE099C29A6F29F77E9F59 /* AnyPromise.m in Sources */,
+				F172F3CE0CB12640F4CB4EAE9DE9238F /* AnyPromise.swift in Sources */,
+				874F17049E22A298B2B4D45DE64EB874 /* CALayer+AnyPromise.m in Sources */,
+				49D5FC365D09969F724965658D16E252 /* dispatch_promise.m in Sources */,
+				E9D84C8C06F308A5AA1EA6E9E0260BA7 /* DispatchQueue+Promise.swift in Sources */,
+				A7F72E2790A4F0BC49C018703FAD365E /* Error.swift in Sources */,
+				E7838B74332B2F84171414D5F60E328D /* GlobalState.m in Sources */,
+				F0171F49970443C7BCFE31AC502BAF26 /* hang.m in Sources */,
+				0380526831E8C4C9D9BEB0F85BF1774D /* join.m in Sources */,
+				22BAC84A2394CCF007C3DE6C0C36EE06 /* join.swift in Sources */,
+				525697DE0A71DB1A69F4179EF49370F7 /* NSNotificationCenter+AnyPromise.m in Sources */,
+				BC2F04A39748C1F6CB2192F27E1BD4BF /* NSNotificationCenter+Promise.swift in Sources */,
+				4324BCA9CB4DAA8E495DAEDF1226CDBB /* NSObject+Promise.swift in Sources */,
+				782F29F855C1943A24F4F9B53C8D6865 /* NSTask+AnyPromise.m in Sources */,
+				765A26A2FF9774EE1C9BBB6F3B4BF780 /* NSURLSession+AnyPromise.m in Sources */,
+				A2FC643235F03A2EA86F17613783E6EE /* NSURLSession+Promise.swift in Sources */,
+				3187ED039DFF4B242F6F13D1A39AFCE4 /* PMKAlertController.swift in Sources */,
+				94346CC628C47D5DB49D45AAC2D80898 /* Process+Promise.swift in Sources */,
+				DCD6DC20A85914A20C3EB73F8868B847 /* Promise+AnyPromise.swift in Sources */,
+				D33D0A6CAFD2092DB34A1EE2F89D6FD9 /* Promise+Properties.swift in Sources */,
+				1E5076F251FD08E190DD3F97E8498A72 /* Promise.swift in Sources */,
+				A495FB2C11BEBF4414370582A4BDF1D9 /* PromiseKit-dummy.m in Sources */,
+				807677B63249FE0EFB6A53FF2085A609 /* race.swift in Sources */,
+				899C52223785161565174F00B79FE0A8 /* State.swift in Sources */,
+				D3A99402BD0ACCA0F4D9E53D2D52A08C /* UIView+AnyPromise.m in Sources */,
+				A22C8C39E16B7B31D68317788C78ACD5 /* UIView+Promise.swift in Sources */,
+				5764F5D821B38B112174EEC013CFF179 /* UIViewController+AnyPromise.m in Sources */,
+				2EFABE51B71A89054817314F7C73148D /* UIViewController+Promise.swift in Sources */,
+				890ABA470A56C59ABCC1EF5C6084AC28 /* URLDataPromise.swift in Sources */,
+				AFC8DFAB1A6733DF9D6925EBCCB52F7D /* when.m in Sources */,
+				C69784C3B28569485CF22A459899B979 /* when.swift in Sources */,
+				3715ED2EC0668DD9C498845765634330 /* wrap.swift in Sources */,
+				1CFF63AEA42868CE8F5A21928C157A23 /* Zalgo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		693E35BECD65BD1C217F5DA2A1466358 /* Sources */ = {
+		6CBED43D8708BCEA92AE35C5D5D5491B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD319AA9A7671FA84805EEF8A5528F0D /* Coordinates.swift in Sources */,
-				FE7D1FEA3D601B3DE691C3215580831C /* PinLayout+Filters.swift in Sources */,
-				B5E7B006A006B0E5E120EEEB7AE3394A /* PinLayout-dummy.m in Sources */,
-				1D70367CCEA9719C58268068897B485C /* PinLayout.swift in Sources */,
-				12FD40F16072232CBCC96C0D53359EF6 /* PinLayoutImpl+Coordinates.swift in Sources */,
-				902C94675DA86921DAA95757825DB6F0 /* PinLayoutImpl+Relative.swift in Sources */,
-				97D5CC77541BF91AE7270CDF1D977023 /* PinLayoutImpl+Warning.swift in Sources */,
-				2E5327547ACF46A7FB70EAAA0F7EE993 /* PinLayoutImpl.swift in Sources */,
-				6A8CB8760A7567997F9BF32A212F44CB /* TypesImpl.swift in Sources */,
+				4640643B074E3F0519E6BE04ED0F9789 /* Coordinates.swift in Sources */,
+				22B29C514723B688DE6273A581F06A87 /* PinLayout+Filters.swift in Sources */,
+				2FCADEAE764D56C7EC852CEC36FDF628 /* PinLayout-dummy.m in Sources */,
+				768CE3AC5D1A170799BB0DC6D815BA81 /* PinLayout.swift in Sources */,
+				AA35E812FD86544973358F5B3C9E1361 /* PinLayoutImpl+Coordinates.swift in Sources */,
+				A1A945B99971C76C14DB616138EA1EAC /* PinLayoutImpl+Relative.swift in Sources */,
+				E9927959D07F3A33EA6A043855AA0FBF /* PinLayoutImpl+Warning.swift in Sources */,
+				90A05B8E86C2F79A1279A5557FF4536D /* PinLayoutImpl.swift in Sources */,
+				BF79CBAEC96D5D73A3FA2AA9EA4B8164 /* TypesImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		084127B023D68F2C4D400D8159F22F17 /* PBXTargetDependency */ = {
+		EC536CA5960DE6D381EAE3654D1B4CE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PinLayout;
 			target = DFC8F0BC2061F1B0118FCC32E4D2643A /* PinLayout */;
-			targetProxy = 172F3A25B7C19E3CF39A2EB38FA9360E /* PBXContainerItemProxy */;
+			targetProxy = 50DD10BA487A1219A6BE32A9CDC0DD5C /* PBXContainerItemProxy */;
+		};
+		EDE69E42CC4FBE573E13413BBE1BBA44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = AEC32048521BDD1E4879ED2D82A88B72 /* PromiseKit */;
+			targetProxy = 9347F74633DD17F560312592BF49A243 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		027C710850C19DE8D470EA3E0B43BC25 /* Debug */ = {
+		036EB825D89AC98518F368931259AC3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D600B91AFA3E196A1051700AFDF79138 /* Pods-PortablePhotoStudio360.debug.xcconfig */;
 			buildSettings = {
@@ -469,9 +788,44 @@
 			};
 			name = Debug;
 		};
+		4E2A0DDC2C629CC9DBC7DB35612C342A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C0144236586CC98375816C4AF0EE70 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4E9CBEE867B068A52BE874120C572530 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */;
+			baseConfigurationReference = 64593DEA223E8316C58C58419A105104 /* PinLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -506,7 +860,7 @@
 		};
 		53668F93EFBCB60B51B037D34DC27997 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31F778AD50B51016D175040E321A5BA2 /* PinLayout.xcconfig */;
+			baseConfigurationReference = 64593DEA223E8316C58C58419A105104 /* PinLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -618,7 +972,7 @@
 			};
 			name = Release;
 		};
-		84B8BA85856AADC51E997D699808AC86 /* Release */ = {
+		85D9AE8621FEC0E56F37159F52F37A08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B3A4C8DD85EA57EC2025038F6833798 /* Pods-PortablePhotoStudio360.release.xcconfig */;
 			buildSettings = {
@@ -692,6 +1046,40 @@
 			};
 			name = Release;
 		};
+		F15639366A8A0D48468CAB279D77135F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C0144236586CC98375816C4AF0EE70 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -722,11 +1110,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F967151E381ECF2EC4A76117D540FEC7 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */ = {
+		4508000CE7C77B63D6C8670F96B68E76 /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				027C710850C19DE8D470EA3E0B43BC25 /* Debug */,
-				84B8BA85856AADC51E997D699808AC86 /* Release */,
+				4E2A0DDC2C629CC9DBC7DB35612C342A /* Debug */,
+				F15639366A8A0D48468CAB279D77135F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E51DB21F9BA27B9365E044182B1797B4 /* Build configuration list for PBXNativeTarget "Pods-PortablePhotoStudio360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036EB825D89AC98518F368931259AC3B /* Debug */,
+				85D9AE8621FEC0E56F37159F52F37A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

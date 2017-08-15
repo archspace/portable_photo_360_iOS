@@ -15,6 +15,7 @@ typealias AvailablePeripheralData = (peripheral:CBPeripheral, advertisementData:
 typealias DiscoverPeripheralsDataHandler = ([UUID:AvailablePeripheralData])->Void
 typealias ConnectPeripheralHandler = (CBPeripheral)->Void
 
+
 class BluetoothCentralService: NSObject {
     
     fileprivate var centralManager:CBCentralManager?
@@ -55,6 +56,7 @@ class BluetoothCentralService: NSObject {
         centralManager?.connect(peripheral, options: nil)
         connectHandler = handler
     }
+    
 }
 
 extension BluetoothCentralService: CBCentralManagerDelegate {
@@ -96,11 +98,13 @@ extension BluetoothCentralService: CBPeripheralDelegate {
         guard let chars = filtered, chars.count >= 3 else {
             return
         }
+        chars.forEach { (char) in
+            peripheral.setNotifyValue(true, for: char)
+        }
         connectHandler?(peripheral)
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
