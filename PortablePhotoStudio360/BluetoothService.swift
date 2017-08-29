@@ -242,10 +242,10 @@ extension BluetoothPeripheralService: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard var stack = writeDataResolvers[characteristic.uuid], stack.count > 0 else {
+        guard writeDataResolvers[characteristic.uuid] != nil, writeDataResolvers[characteristic.uuid]!.count > 0 else {
             return
         }
-        let resolver = stack.remove(at: 0)
+        let resolver = writeDataResolvers[characteristic.uuid]!.remove(at: 0)
         if let err = error {
             resolver.reject(err)
         }else{
@@ -254,10 +254,10 @@ extension BluetoothPeripheralService: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard var stack = readDataResolvers[characteristic.uuid], stack.count > 0 else {
+        guard readDataResolvers[characteristic.uuid] != nil, readDataResolvers[characteristic.uuid]!.count > 0 else {
             return
         }
-        let resolver = stack.remove(at: 0)
+        let resolver = readDataResolvers[characteristic.uuid]!.remove(at: 0)
         if let err = error {
             resolver.reject(err)
         }else {
