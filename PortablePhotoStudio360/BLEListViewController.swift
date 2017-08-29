@@ -41,10 +41,10 @@ class BLEListViewController: UIViewController {
     }
     
     func scanIfCould() {
-        guard mediator?.bleService.centralStatus == .poweredOn else {
+        guard mediator?.bleCentralService.centralStatus == .poweredOn else {
             return
         }
-        mediator?.bleService.startScan(discoverHandler: { [unowned self](peripherals) in
+        mediator?.bleCentralService.startScan(discoverHandler: { [unowned self](peripherals) in
             self.peripherals = peripherals
             self.tableView.reloadData()
         })
@@ -76,10 +76,9 @@ extension BLEListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let id = Array(peripherals.keys)[indexPath.row]
-        if let data = peripherals[id] {
-            mediator?.bleService.connect(peripheral: data.peripheral, handler: { [weak self](p) in
-                self?.mediator?.toRoute(route: .Camera, fromController: self, userInfo: ["peripheral": p])
-            })
+        guard let p = peripherals[id]?.peripheral else {
+            return
         }
+        
     }
 }

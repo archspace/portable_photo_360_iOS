@@ -22,12 +22,12 @@ class AppMediator: NSObject {
     
     private let window:UIWindow
     
-    let bleService:BluetoothCentralService
+    let bleCentralService:BluetoothCentralService
     let rootNavigation:UINavigationController
     
     init(withWindow window:UIWindow) {
         self.window = window
-        bleService = BluetoothCentralService{(state) in
+        bleCentralService = BluetoothCentralService{(state) in
             NotificationCenter.default.post(name: .BLEStateChange, object: nil, userInfo: ["state": stat])
         }
         let ble = BLEListViewController()
