@@ -42,6 +42,13 @@ extension CBService {
         }
         return target.count == 0
     }
+    
+    func characteristic(withUUID uuid:CBUUID) -> CBCharacteristic? {
+        let result = characteristics?.filter({ (c) -> Bool in
+            return c.uuid == uuid
+        }).first
+        return result
+    }
 }
 
 enum BLEError:Error {
@@ -143,7 +150,7 @@ class BluetoothPeripheralService:NSObject {
     fileprivate var discoverServiceResolver:(fulfill:(CBPeripheral)->Void, reject:(Error)->Void)?
     fileprivate var discoverCharacteristicsResolver:(fulfill:(CBPeripheral)->Void, reject:(Error)->Void)?
     
-    struct PeripheralWriteResolver {
+    struct PeripheralReadWriteResolver {
         let fulfill:(CBCharacteristic)->Void
         let reject:(Error)->Void
         
@@ -153,7 +160,8 @@ class BluetoothPeripheralService:NSObject {
         }
     }
     
-    fileprivate var writeDataResolvers = [CBUUID: [PeripheralWriteResolver]]()
+    fileprivate var writeDataResolvers = [CBUUID: [PeripheralReadWriteResolver]]()
+    fileprivate var readDataResolvers = [CBUUID: [PeripheralReadWriteResolver]]()
     
     init(p:CBPeripheral){
         peripheral = p
@@ -184,7 +192,7 @@ class BluetoothPeripheralService:NSObject {
     func write(data:Data, charateristic:CBCharacteristic)->Promise<CBCharacteristic> {
         peripheral.writeValue(data, for: charateristic, type: CBCharacteristicWriteType.withResponse)
         let pending = Promise<CBCharacteristic>.pending()
-        let resolver = PeripheralWriteResolver(fulfill: pending.fulfill, reject: pending.reject)
+        let resolver = PeripheralReadWriteResolver(fulfill: pending.fulfill, reject: pending.reject)
         if var stack = writeDataResolvers[charateristic.uuid] {
             stack.append(resolver)
         }else{
@@ -193,8 +201,16 @@ class BluetoothPeripheralService:NSObject {
         return pending.promise
     }
     
-    func setNotifyFor(charateristic:CBCharacteristic) {
-        peripheral.setNotifyValue(true, for: charateristic)
+    func read(charateristic:CBCharacteristic)->Promise<CBCharacteristic> {
+        peripheral.readValue(for: charateristic)
+        let pending = Promise<CBCharacteristic>.pending()
+        let resolver = PeripheralReadWriteResolver(fulfill: pending.fulfill, reject: pending.reject)
+        if var stack = readDataResolvers[charateristic.uuid] {
+            stack.append(resolver)
+        }else {
+            readDataResolvers[charateristic.uuid] = [resolver]
+        }
+        return pending.promise
     }
     
 }
@@ -226,9 +242,10 @@ extension BluetoothPeripheralService: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard let resolver = writeDataResolvers[characteristic.uuid]?.remove(at: 0) else {
+        guard var stack = writeDataResolvers[characteristic.uuid], stack.count > 0 else {
             return
         }
+        let resolver = stack.remove(at: 0)
         if let err = error {
             resolver.reject(err)
         }else{
@@ -237,7 +254,15 @@ extension BluetoothPeripheralService: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        NotificationCenter.default.post(name: .CharacteristicValueUpdate, object: nil, userInfo: ["char": characteristic, "peripheral": peripheral])
+        guard var stack = readDataResolvers[characteristic.uuid], stack.count > 0 else {
+            return
+        }
+        let resolver = stack.remove(at: 0)
+        if let err = error {
+            resolver.reject(err)
+        }else {
+            resolver.fulfill(characteristic)
+        }
     }
     
 }
