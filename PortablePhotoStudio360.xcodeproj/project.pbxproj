@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110C80FB1F554FB600330464 /* BluetoothValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110C80FA1F554FB600330464 /* BluetoothValueModel.swift */; };
 		117BA80C1F1211560006541B /* AppMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BA80B1F1211560006541B /* AppMediator.swift */; };
 		117BA80F1F1227F80006541B /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117BA80E1F1227F80006541B /* BluetoothService.swift */; };
 		11C4A1C71F3074F90037F615 /* BLEListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C4A1C61F3074F90037F615 /* BLEListViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110C80FA1F554FB600330464 /* BluetoothValueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothValueModel.swift; sourceTree = "<group>"; };
 		117BA80B1F1211560006541B /* AppMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMediator.swift; sourceTree = "<group>"; };
 		117BA80E1F1227F80006541B /* BluetoothService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 		11B1A6F4E6B3AE1E5472C0F5 /* Pods-PortablePhotoStudio360.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortablePhotoStudio360.release.xcconfig"; path = "Pods/Target Support Files/Pods-PortablePhotoStudio360/Pods-PortablePhotoStudio360.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110C80F91F554F8200330464 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				110C80FA1F554FB600330464 /* BluetoothValueModel.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		117BA80A1F12113E0006541B /* mediators */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		11E027D51F121048009D56A9 /* PortablePhotoStudio360 */ = {
 			isa = PBXGroup;
 			children = (
+				110C80F91F554F8200330464 /* models */,
 				11C4A1CC1F30994B0037F615 /* view */,
 				11C4A1C51F3074CD0037F615 /* controllers */,
 				117BA80D1F1227CE0006541B /* services */,
@@ -384,6 +395,7 @@
 				117BA80C1F1211560006541B /* AppMediator.swift in Sources */,
 				11C4A1CB1F3083DD0037F615 /* PhotoViewController.swift in Sources */,
 				11C4A1C71F3074F90037F615 /* BLEListViewController.swift in Sources */,
+				110C80FB1F554FB600330464 /* BluetoothValueModel.swift in Sources */,
 				11E027D71F121048009D56A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

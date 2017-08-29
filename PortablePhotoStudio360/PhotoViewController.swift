@@ -23,21 +23,9 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        session.beginConfiguration()
-        if session.canSetSessionPreset(AVCaptureSessionPresetHigh) {
-            session.sessionPreset = AVCaptureSessionPresetHigh
-        }else if session.canSetSessionPreset(AVCaptureSessionPresetMedium){
-            session.sessionPreset = AVCaptureSessionPresetMedium
-        }else{
-            session.sessionPreset = AVCaptureSessionPresetLow
-        }
-        if let device = deviceSession?.devices.first {
-            let input = try! AVCaptureDeviceInput(device: device)
-            session.addInput(input)
-        }
-        session.commitConfiguration()
+        captureSessionConfig()
         setupUI()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(onDeviceDisconnect), name: .BluetoothDisconnect, object: nil)
     }
     
     deinit {
@@ -54,6 +42,22 @@ class PhotoViewController: UIViewController {
         session.stopRunning()
     }
     
+    func captureSessionConfig() {
+        session.beginConfiguration()
+        if session.canSetSessionPreset(AVCaptureSessionPresetHigh) {
+            session.sessionPreset = AVCaptureSessionPresetHigh
+        }else if session.canSetSessionPreset(AVCaptureSessionPresetMedium){
+            session.sessionPreset = AVCaptureSessionPresetMedium
+        }else{
+            session.sessionPreset = AVCaptureSessionPresetLow
+        }
+        if let device = deviceSession?.devices.first {
+            let input = try! AVCaptureDeviceInput(device: device)
+            session.addInput(input)
+        }
+        session.commitConfiguration()
+    }
+    
     func setupUI() {
         view.backgroundColor = UIColor.black
         videoView = PreviewView(frame: view.bounds, session: session)
@@ -65,6 +69,8 @@ class PhotoViewController: UIViewController {
         videoView?.pin.top(44).left(0).right(0).bottom(122)
     }
     
-
+    func onDeviceDisconnect() {
+        mediator?.toRoute(route: .BluetoothList, fromController: self, userInfo: nil)
+    }
     
 }
