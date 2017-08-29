@@ -193,8 +193,8 @@ class BluetoothPeripheralService:NSObject {
         peripheral.writeValue(data, for: charateristic, type: CBCharacteristicWriteType.withResponse)
         let pending = Promise<CBCharacteristic>.pending()
         let resolver = PeripheralReadWriteResolver(fulfill: pending.fulfill, reject: pending.reject)
-        if var stack = writeDataResolvers[charateristic.uuid] {
-            stack.append(resolver)
+        if writeDataResolvers[charateristic.uuid] != nil {
+            writeDataResolvers[charateristic.uuid]?.append(resolver)
         }else{
             writeDataResolvers[charateristic.uuid] = [resolver]
         }
@@ -205,8 +205,8 @@ class BluetoothPeripheralService:NSObject {
         peripheral.readValue(for: charateristic)
         let pending = Promise<CBCharacteristic>.pending()
         let resolver = PeripheralReadWriteResolver(fulfill: pending.fulfill, reject: pending.reject)
-        if var stack = readDataResolvers[charateristic.uuid] {
-            stack.append(resolver)
+        if readDataResolvers[charateristic.uuid] != nil {
+            readDataResolvers[charateristic.uuid]?.append(resolver)
         }else {
             readDataResolvers[charateristic.uuid] = [resolver]
         }
