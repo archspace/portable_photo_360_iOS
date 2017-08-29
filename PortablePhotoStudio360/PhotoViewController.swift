@@ -20,6 +20,7 @@ class PhotoViewController: UIViewController {
     let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back)
     var videoView:PreviewView?
     let testButton = UIButton()
+    let testLED = UIButton()
     
     
     override func viewDidLoad() {
@@ -63,15 +64,19 @@ class PhotoViewController: UIViewController {
         view.backgroundColor = UIColor.black
         videoView = PreviewView(frame: view.bounds, session: session)
         view.addSubview(videoView!)
-        testButton.setTitle("test", for: .normal)
+        testButton.setTitle("testMotor", for: .normal)
         view.addSubview(testButton)
-        testButton.addTarget(self, action: #selector(onTest), for: .touchUpInside)
+        testButton.addTarget(self, action: #selector(onTestMotor), for: .touchUpInside)
+        view.addSubview(testLED)
+        testLED.setTitle("testLED", for: .normal)
+        testLED.addTarget(self, action: #selector(onTestLED), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         videoView?.pin.top(44).left(0).right(0).bottom(122)
-        testButton.pin.bottom().right().width(40).height(40)
+        testButton.pin.bottom(20).right(20).width(60).height(40)
+        testLED.pin.bottom(20).left(20).width(60).height(40)
     }
     
     func onDeviceDisconnect() {
@@ -90,13 +95,13 @@ class PhotoViewController: UIViewController {
         return r
     }
     
-    func onTest() {
+    func onTestMotor() {
         guard let pS = pService, let service = pS.peripheral.serviceWithUUID(uuid: pS.serviceUUID),
             let char = service.characteristic(withUUID: pS.motorCharUUID) else {
             return
         }
         
-        let motorR = MotorRequest(isClockwise: false, angle: 20)
+        let motorR = MotorRequest(isClockwise: false, angle: 180)
         pS.write(data: motorR.data(), charateristic: char).then { (c) -> Promise<CBCharacteristic> in
             return pS.read(charateristic: char)
         }.then(execute: { (c) -> Void in
@@ -106,6 +111,21 @@ class PhotoViewController: UIViewController {
         }).catch { (err) in
             print(err)
         }
+    }
+    
+    func onTestLED() {
+        guard let pS = pService, let service = pS.peripheral.serviceWithUUID(uuid: pS.serviceUUID),
+            let char = service.characteristic(withUUID: pS.ledCharUUID) else {
+            return
+        }
+        let ledR = LEDRequest(LED1: 0.1, LED2: 0.1, LED3: 0.1)
+        pS.write(data: ledR!.data(), charateristic: char)
+        .then { (c) -> Void in
+            
+        }.catch { (err) in
+            print(err)
+        }
+        
     }
     
 }
