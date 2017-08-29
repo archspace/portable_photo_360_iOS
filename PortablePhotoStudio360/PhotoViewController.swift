@@ -27,7 +27,6 @@ class PhotoViewController: UIViewController {
         captureSessionConfig()
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(onDeviceDisconnect), name: .BluetoothDisconnect, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onCharNotify(notification:)), name: .CharacteristicValueUpdate, object: nil)
     }
     
     deinit {
@@ -101,13 +100,12 @@ class PhotoViewController: UIViewController {
         pS.write(data: motorR.data(), charateristic: char).then { (c) -> Promise<CBCharacteristic> in
             return pS.read(charateristic: char)
         }.then(execute: { (c) -> Void in
-            print(c.value)
+            guard let value = c.value else {return}
+            let req = MotorRequest(withValue: value)
+            print(req)
         }).catch { (err) in
             print(err)
         }
     }
     
-    func onCharNotify(notification:Notification) {
-        print(notification.userInfo)
-    }
 }
