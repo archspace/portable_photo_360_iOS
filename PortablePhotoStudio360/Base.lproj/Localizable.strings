@@ -5,3 +5,7 @@
   Created by ChangChao-Tang on 2017/8/1.
   Copyright © 2017年 ChangChao-Tang. All rights reserved.
 */
+
+"Error.NoAvailableService"          = "No available services for this device";
+"Error.NoAvailableCharateristics"   = "No available characteristics for this device";
+"Error.ErrorWhileConnect"           = "Error occur while connection";

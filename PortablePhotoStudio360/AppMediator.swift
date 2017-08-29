@@ -22,12 +22,12 @@ class AppMediator: NSObject {
     
     private let window:UIWindow
     
-    let bleService:BluetoothCentralService
+    let bleCentralService:BluetoothCentralService
     let rootNavigation:UINavigationController
     
     init(withWindow window:UIWindow) {
         self.window = window
-        bleService = BluetoothCentralService{(state) in
+        bleCentralService = BluetoothCentralService{(state) in
             NotificationCenter.default.post(name: .BLEStateChange, object: nil, userInfo: ["state": stat])
         }
         let ble = BLEListViewController()
@@ -47,12 +47,12 @@ class AppMediator: NSObject {
             rootNavigation.popToRootViewController(animated: true)
             break
         case .Camera:
-            guard let peripheral = userInfo?["periphera"] as? CBPeripheral else {
+            guard let peripheral = userInfo?["peripheral"] as? CBPeripheral else {
                 return
             }
             let photo = PhotoViewController()
             photo.mediator = self
-            photo.peripheral = peripheral
+            photo.pService = BluetoothPeripheralService(p: peripheral)
             rootNavigation.pushViewController(photo, animated: true)
             break
         }
