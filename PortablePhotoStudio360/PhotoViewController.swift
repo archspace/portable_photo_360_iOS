@@ -10,11 +10,12 @@ import UIKit
 import PinLayout
 import AVFoundation
 import CoreBluetooth
+import PromiseKit
 
 class PhotoViewController: UIViewController {
     
     var mediator: AppMediator?
-    var peripheral: CBPeripheral?
+    var pService: BluetoothPeripheralService?
     let session = AVCaptureSession()
     let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back)
     var videoView:PreviewView?
@@ -36,7 +37,7 @@ class PhotoViewController: UIViewController {
         }
         session.commitConfiguration()
         setupUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(onStateChange(notify:)), name: .BLEStateChange, object: nil)
+        
     }
     
     deinit {
@@ -64,9 +65,6 @@ class PhotoViewController: UIViewController {
         videoView?.pin.top(44).left(0).right(0).bottom(122)
     }
     
-    func onStateChange(notify:Notification) {
-        
-    }
 
     
 }

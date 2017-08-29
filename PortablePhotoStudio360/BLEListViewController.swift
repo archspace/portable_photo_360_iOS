@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreBluetooth
+import PromiseKit
 
 class BLEListViewController: UIViewController {
     
@@ -32,6 +33,7 @@ class BLEListViewController: UIViewController {
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 60
     }
     
     override func viewDidLayoutSubviews() {
@@ -76,9 +78,53 @@ extension BLEListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let id = Array(peripherals.keys)[indexPath.row]
-        guard let p = peripherals[id]?.peripheral else {
+        guard let p = peripherals[id]?.peripheral, let service = mediator?.bleCentralService else {
             return
         }
-        
+        var pService:BluetoothPeripheralService?
+        service.connect(peripheral: p)
+            .then { (p) -> Promise<CBPeripheral> in
+                pService = BluetoothPeripheralService(p: p)
+                return pService!.discoverService()
+            }
+            .then(execute: { (p) -> Promise<CBPeripheral> in
+                guard let pS = pService,
+                    let service = p.serviceWithUUID(uuid: pS.serviceUUID) else{
+                    throw BLEError.NoAvailableService
+                }
+                return pS.discoverCharacteristics(service: service)
+            })
+            .then(execute: { (p) -> Void in
+                guard let pS = pService,
+                    let service = p.serviceWithUUID(uuid: pS.serviceUUID),
+                    service.containCharacteristics(uuids: [pS.generalCharUUID, pS.ledCharUUID, pS.motorCharUUID]) else {
+                    throw BLEError.NoAvailableCharateristics
+                }
+                guard let mediator = self.mediator else{
+                    return
+                }
+                mediator.toRoute(route: .Camera, fromController: self, userInfo: ["peripheral": p])
+            })
+            .catch { (err) in
+                if let pS = pService, let cService = self.mediator?.bleCentralService {
+                    cService.disconnect(peripheral: pS.peripheral)
+                }
+                var msg = ""
+                switch err {
+                case BLEError.NoAvailableService:
+                    msg = NSLocalizedString("Error.NoAvailableService", comment: "")
+                    break
+                case BLEError.NoAvailableCharateristics:
+                    msg = NSLocalizedString("Error.NoAvailableCharateristics", comment: "")
+                    break
+                default:
+                    msg = NSLocalizedString("Error.ErrorWhileConnect", comment: "")
+                    break
+                }
+                if let mediator = self.mediator {
+                    mediator.showAlert(message: msg, onController: self)
+                }
+                print(err)
+            }
     }
 }

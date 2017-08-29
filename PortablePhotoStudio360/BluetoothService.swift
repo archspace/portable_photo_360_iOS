@@ -21,8 +21,31 @@ extension Notification.Name {
     static let BluetoothDisconnect = Notification.Name(rawValue: "BluetoothDisconnect")
 }
 
+extension CBPeripheral {
+    
+    func serviceWithUUID(uuid:CBUUID) -> CBService? {
+        let result = services?.filter({ (service) -> Bool in
+            return service.uuid == uuid
+        }).first
+        return result
+    }
+}
+
+extension CBService {
+    
+    func containCharacteristics(uuids:[CBUUID]) -> Bool {
+        var target = uuids
+        for i in 0...(characteristics?.count ?? 0) {
+            if target.count == 0 {break}
+            let c = characteristics![i]
+            if let idx = target.index(of: c.uuid) {target.remove(at: idx)}
+        }
+        return target.count == 0
+    }
+}
+
 enum BLEError:Error {
-    case PrevPromiseNotResolved
+    case PrevPromiseNotResolved, NoAvailableService, NoAvailableCharateristics
 }
 
 
@@ -110,13 +133,13 @@ extension BluetoothCentralService: CBCentralManagerDelegate {
 
 class BluetoothPeripheralService:NSObject {
     
-    fileprivate let serviceUUID =       CBUUID(string: "E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
-    fileprivate let generalCharUUID =   CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE0")
-    fileprivate let ledCharUUID =       CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE1")
-    fileprivate let motorCharUUID =     CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE2")
+    let peripheral:CBPeripheral
+    let serviceUUID =       CBUUID(string: "E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
+    let generalCharUUID =   CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE0")
+    let ledCharUUID =       CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE1")
+    let motorCharUUID =     CBUUID(string: "01234567-89AB-CDEF-0123-456789ABCDE2")
     fileprivate var service:CBService?
     fileprivate var pendingWrite = [CBUUID: Array<Promise<Void>.PendingTuple>]()
-    fileprivate let peripheral:CBPeripheral
     fileprivate var discoverServiceResolver:(fulfill:(CBPeripheral)->Void, reject:(Error)->Void)?
     fileprivate var discoverCharacteristicsResolver:(fulfill:(CBPeripheral)->Void, reject:(Error)->Void)?
     

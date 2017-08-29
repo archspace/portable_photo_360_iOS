@@ -47,12 +47,12 @@ class AppMediator: NSObject {
             rootNavigation.popToRootViewController(animated: true)
             break
         case .Camera:
-            guard let peripheral = userInfo?["periphera"] as? CBPeripheral else {
+            guard let peripheral = userInfo?["peripheral"] as? CBPeripheral else {
                 return
             }
             let photo = PhotoViewController()
             photo.mediator = self
-            photo.peripheral = peripheral
+            photo.pService = BluetoothPeripheralService(p: peripheral)
             rootNavigation.pushViewController(photo, animated: true)
             break
         }
