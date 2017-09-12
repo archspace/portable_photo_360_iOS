@@ -19,6 +19,7 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     var pService: BluetoothPeripheralService?
     let session = AVCaptureSession()
     let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back)
+    let motorOperationQueue:OperationQueue = OperationQueue()
     var videoView:PreviewView?
     let popoButton = UIButton()
     let startButton = UIButton()
@@ -113,7 +114,13 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     }
     
     func onStart() {
-        
+        startButton.isEnabled = false
+        guard motorOperationQueue.operations.count == 0 else {
+            return
+        }
+        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 36, totalSteps: 10, stepTimeout: 5)
+        operation.delegate = self
+        motorOperationQueue.addOperation(operation)
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
@@ -121,7 +128,6 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     }
     
 }
-
 
 extension PhotoViewController:SliderViewControllerDelegate {
     func sliderDidUpdated(led1: Float, led2: Float, led3: Float){
@@ -145,6 +151,27 @@ extension PhotoViewController:SliderViewControllerDelegate {
                 print(err)
             }
     }
+}
 
+extension PhotoViewController:RotateOperationDelegate {
+    
+    func operation(operation: RotateOperation, didOccurredError error: Error) {
+        
+    }
+    
+    func operation(operation: RotateOperation, didStopWithError error: RotationError) {
+        
+    }
+    
+    func operationMotorNotReady(operation: RotateOperation) {
+        
+    }
+    
+    func operationDidFinishOneStep(operation: RotateOperation) {
+    }
+    
+    func operationDidFinished(operation: RotateOperation) {
+        startButton.isEnabled = true
+    }
 }
 
