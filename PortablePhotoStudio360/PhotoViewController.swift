@@ -21,10 +21,10 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back)
     var videoView:PreviewView?
     let popoButton = UIButton()
+    let startButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         captureSessionConfig()
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(onDeviceDisconnect), name: .BluetoothDisconnect, object: nil)
@@ -68,15 +68,19 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         view.backgroundColor = UIColor.black
         videoView = PreviewView(frame: view.bounds, session: session)
         view.addSubview(videoView!)
-        popoButton .setTitle("LED", for: .normal)
+        popoButton.setTitle("LED", for: .normal)
         popoButton.addTarget(self, action: #selector(onPopoView), for: .touchUpInside)
         view.addSubview(popoButton)
+        startButton.setTitle("Start", for: .normal)
+        startButton.addTarget(self, action: #selector(onStart), for: .touchUpInside)
+        view.addSubview(startButton)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         videoView?.pin.top(44).left(0).right(0).bottom(120)
         popoButton.pin.bottom(30).left(10).width(60).height(60)
+        startButton.pin.hCenter(50%).bottom(30).height(60).width(60)
     }
     
     func onDeviceDisconnect() {
@@ -96,7 +100,6 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     }
     
     func onPopoView() {
-
         let controller = SliderViewController()
         controller.view.backgroundColor = UIColor.white
         controller.preferredContentSize = CGSize(width: 500, height: 200)
@@ -105,9 +108,12 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         controller.popoverPresentationController?.sourceView = view
         controller.popoverPresentationController?.sourceRect = popoButton.frame
         controller.popoverPresentationController?.permittedArrowDirections = .any
-        
         controller.delegate = self
         present(controller, animated: true, completion: nil)
+    }
+    
+    func onStart() {
+        
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
