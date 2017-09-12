@@ -23,6 +23,7 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     var videoView:PreviewView?
     let popoButton = UIButton()
     let startButton = UIButton()
+    var captureOutput:AVCapturePhotoOutput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,13 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         if let device = deviceSession?.devices.first {
             let input = try! AVCaptureDeviceInput(device: device)
             session.addInput(input)
+        }
+        let output = AVCapturePhotoOutput()
+        output.isHighResolutionCaptureEnabled = true
+        output.isLivePhotoCaptureEnabled = false
+        if session.canAddOutput(output){
+            session.addOutput(output)
+            captureOutput = output
         }
         session.commitConfiguration()
     }
@@ -115,10 +123,10 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     
     func onStart() {
         startButton.isEnabled = false
-        guard motorOperationQueue.operations.count == 0 else {
+        guard motorOperationQueue.operations.count == 0, let output = captureOutput else {
             return
         }
-        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 36, totalSteps: 10, stepTimeout: 5)
+        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 36, totalSteps: 10, stepTimeout: 5, photoOutput: output)
         operation.delegate = self
         motorOperationQueue.addOperation(operation)
     }
@@ -168,6 +176,7 @@ extension PhotoViewController:RotateOperationDelegate {
     }
     
     func operationDidFinishOneStep(operation: RotateOperation) {
+       
     }
     
     func operationDidFinished(operation: RotateOperation) {
