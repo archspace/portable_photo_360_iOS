@@ -12,7 +12,8 @@ import AVFoundation
 import CoreBluetooth
 import PromiseKit
 
-class PhotoViewController: UIViewController {
+
+class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDelegate {
     
     var mediator: AppMediator?
     var pService: BluetoothPeripheralService?
@@ -21,13 +22,18 @@ class PhotoViewController: UIViewController {
     var videoView:PreviewView?
     let testButton = UIButton()
     let testLED = UIButton()
-    
-    
+    let popoButton = UIButton()
+    let slider1 = UISlider()
+    let slider2 = UISlider()
+    let slider3 = UISlider()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         captureSessionConfig()
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(onDeviceDisconnect), name: .BluetoothDisconnect, object: nil)
+        
     }
     
     deinit {
@@ -70,6 +76,11 @@ class PhotoViewController: UIViewController {
         view.addSubview(testLED)
         testLED.setTitle("testLED", for: .normal)
         testLED.addTarget(self, action: #selector(onTestLED), for: .touchUpInside)
+        popoButton .setTitle("Po", for: .normal)
+        popoButton.addTarget(self, action: #selector(onPopoView), for: .touchUpInside)
+        view.addSubview(popoButton)
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,6 +88,7 @@ class PhotoViewController: UIViewController {
         videoView?.pin.top(44).left(0).right(0).bottom(122)
         testButton.pin.bottom(20).right(20).width(60).height(40)
         testLED.pin.bottom(20).left(20).width(60).height(40)
+        popoButton.pin.bottom(20).right(100).width(60).height(60)
     }
     
     func onDeviceDisconnect() {
@@ -127,5 +139,69 @@ class PhotoViewController: UIViewController {
         }
         
     }
+    func onPopoView() {
+
+        let controller = SliderViewController()
+        controller.view.backgroundColor = UIColor.white
+        controller.preferredContentSize = CGSize(width: 500, height: 200)
+        controller.modalPresentationStyle = .popover
     
+
+        controller.popoverPresentationController?.delegate = self
+        controller.popoverPresentationController?.sourceView = view
+        controller.popoverPresentationController?.sourceRect = popoButton.frame
+        controller.popoverPresentationController?.permittedArrowDirections = .any
+        
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!, traitCollection: UITraitCollection!) -> UIModalPresentationStyle{
+//        return UIModalPresentationStyle.none
+//    }
+    
+    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController){
+        print("prepareForPopoverPresentation")
+    }
+    
+    func popoverPresentationController(_ popoverPresentationController: UIPopoverPresentationController, willRepositionPopoverTo rect: UnsafeMutablePointer<CGRect>, in view: AutoreleasingUnsafeMutablePointer<UIView>) {
+        
+    }
 }
+
+
+extension PhotoViewController:SliderViewControllerDelegate {
+    func sliderDidUpdated(led1: Float, led2: Float, led3: Float){
+        print("led1: " + String(led1) + ", led2: " + String(led2) + ", led3: " + String(led3))
+        guard let pS = pService, let service = pS.peripheral.serviceWithUUID(uuid: pS.serviceUUID),
+            let char = service.characteristic(withUUID: pS.ledCharUUID) else {
+                return
+        }
+        let ledR = LEDRequest(LED1: led1, LED2: led2, LED3: led3)
+        pS.write(data: ledR!.data(), charateristic: char)
+            .then { (c) -> Promise<CBCharacteristic> in
+                return pS.read(charateristic: c)
+            }
+            .then(execute: { (c) -> Void in
+                guard let value = c.value, let ledRes = LEDRequest(withValue: value) else {
+                    return
+                }
+                print(ledRes)
+            })
+            .catch { (err) in
+                print(err)
+            }
+    }
+
+}
+
+
+
+//    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+//        let navigationController = UINavigationController(rootViewController: controller.presentedViewController)
+//         return navigationController
+//    }
