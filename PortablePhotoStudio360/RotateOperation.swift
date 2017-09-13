@@ -64,32 +64,33 @@ class RotateOperation: Operation {
             if isCancelled {
                 break
             }
-            DispatchQueue.main.async {
-                self.pService.read(charateristic: char)
-                    .then(execute: { (char) -> Promise<CBCharacteristic>? in
-                        guard let value = char.value, let state = MotorRequest(withValue: value) else{
-                            throw RotationError.MotorCharacteristicValueError
-                        }
-                        if state.isReady! {
-                            let req = MotorRequest(isClockwise: self.isClockwise, angle: self.angle)
-                            return self.pService.write(data: req.data(), charateristic: char)
-                        }else {
-                            self.delegate?.operationMotorNotReady(operation: self)
-                            return nil
-                        }
-                    })
-                    .then(execute: { (char) -> Void in
-                        if char != nil {
-                            sleep(3)
-                            self.snapPhoto()
-                            self.stepsRemain -= 1
-                            self.delegate?.operationDidFinishOneStep(operation: self)
-                        }
-                    })
-                    .catch(execute: { (err) in
-                        self.delegate?.operation(operation: self, didOccurredError: err)
-                    })
-            }
+            let semophore = DispatchSemaphore(value: 0)
+            self.pService.read(charateristic: char)
+                .then(execute: { (char) -> Promise<CBCharacteristic>? in
+                    guard let value = char.value, let state = MotorRequest(withValue: value) else{
+                        throw RotationError.MotorCharacteristicValueError
+                    }
+                    if state.isReady! {
+                        self.snapPhoto()
+                        let req = MotorRequest(isClockwise: self.isClockwise, angle: self.angle)
+                        return self.pService.write(data: req.data(), charateristic: char)
+                    }else {
+                        self.delegate?.operationMotorNotReady(operation: self)
+                        return nil
+                    }
+                })
+                .then(execute: { (char) -> Void in
+                    if char != nil && self.stepsRemain >= 1 {
+                        self.stepsRemain -= 1
+                        self.delegate?.operationDidFinishOneStep(operation: self)
+                    }
+                    semophore.signal()
+                })
+                .catch(execute: { (err) in
+                    self.delegate?.operation(operation: self, didOccurredError: err)
+                    semophore.signal()
+                })
+            let _ = semophore.wait(timeout: DispatchTime.distantFuture)
             if isCancelled {
                 break
             }
@@ -122,7 +123,7 @@ class RotateOperation: Operation {
             option.originalFilename = self.photoName!
             req.addResource(with: .photo, data: data, options: option)
         }) { (success, err) in
-            print(self.photoName!)
+           
         }
     }
 }
@@ -135,7 +136,6 @@ extension RotateOperation:AVCapturePhotoCaptureDelegate {
                  resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         guard error == nil, let photoSampleBuffer = photoSampleBuffer else {
-            print("Error capturing photo: \(String(describing: error))")
             return
         }
         self.photoSampleBuffer = photoSampleBuffer
@@ -145,7 +145,6 @@ extension RotateOperation:AVCapturePhotoCaptureDelegate {
     
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishCaptureForResolvedSettings resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {
         guard error == nil else {
-            print("Error in capture process: \(String(describing: error))")
             return
         }
         if let sampleBuffer = photoSampleBuffer {

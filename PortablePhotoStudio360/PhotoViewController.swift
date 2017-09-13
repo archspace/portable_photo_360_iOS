@@ -126,7 +126,7 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         guard motorOperationQueue.operations.count == 0, let output = captureOutput else {
             return
         }
-        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 36, totalSteps: 10, stepTimeout: 5, photoOutput: output)
+        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 18, totalSteps: 20, stepTimeout: 3, photoOutput: output)
         operation.delegate = self
         motorOperationQueue.addOperation(operation)
     }
@@ -176,7 +176,7 @@ extension PhotoViewController:RotateOperationDelegate {
     }
     
     func operationDidFinishOneStep(operation: RotateOperation) {
-       
+       print(operation.stepsRemain)
     }
     
     func operationDidFinished(operation: RotateOperation) {
