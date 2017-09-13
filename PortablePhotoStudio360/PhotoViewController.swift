@@ -19,21 +19,17 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     var pService: BluetoothPeripheralService?
     let session = AVCaptureSession()
     let deviceSession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back)
+    let motorOperationQueue:OperationQueue = OperationQueue()
     var videoView:PreviewView?
-    let testButton = UIButton()
-    let testLED = UIButton()
     let popoButton = UIButton()
-    let slider1 = UISlider()
-    let slider2 = UISlider()
-    let slider3 = UISlider()
+    let startButton = UIButton()
+    var captureOutput:AVCapturePhotoOutput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         captureSessionConfig()
         setupUI()
         NotificationCenter.default.addObserver(self, selector: #selector(onDeviceDisconnect), name: .BluetoothDisconnect, object: nil)
-        
     }
     
     deinit {
@@ -48,6 +44,10 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         session.stopRunning()
+        guard let mediator = mediator, let p = pService?.peripheral else {
+            return
+        }
+        mediator.bleCentralService.disconnect(peripheral: p)
     }
     
     func captureSessionConfig() {
@@ -63,6 +63,13 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
             let input = try! AVCaptureDeviceInput(device: device)
             session.addInput(input)
         }
+        let output = AVCapturePhotoOutput()
+        output.isHighResolutionCaptureEnabled = true
+        output.isLivePhotoCaptureEnabled = false
+        if session.canAddOutput(output){
+            session.addOutput(output)
+            captureOutput = output
+        }
         session.commitConfiguration()
     }
     
@@ -70,25 +77,19 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         view.backgroundColor = UIColor.black
         videoView = PreviewView(frame: view.bounds, session: session)
         view.addSubview(videoView!)
-        testButton.setTitle("testMotor", for: .normal)
-        view.addSubview(testButton)
-        testButton.addTarget(self, action: #selector(onTestMotor), for: .touchUpInside)
-        view.addSubview(testLED)
-        testLED.setTitle("testLED", for: .normal)
-        testLED.addTarget(self, action: #selector(onTestLED), for: .touchUpInside)
-        popoButton .setTitle("Po", for: .normal)
+        popoButton.setTitle("LED", for: .normal)
         popoButton.addTarget(self, action: #selector(onPopoView), for: .touchUpInside)
         view.addSubview(popoButton)
-        
-        
+        startButton.setTitle("Start", for: .normal)
+        startButton.addTarget(self, action: #selector(onStart), for: .touchUpInside)
+        view.addSubview(startButton)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        videoView?.pin.top(44).left(0).right(0).bottom(122)
-        testButton.pin.bottom(20).right(20).width(60).height(40)
-        testLED.pin.bottom(20).left(20).width(60).height(40)
-        popoButton.pin.bottom(20).right(100).width(60).height(60)
+        videoView?.pin.top(44).left(0).right(0).bottom(120)
+        popoButton.pin.bottom(30).left(10).width(60).height(60)
+        startButton.pin.hCenter(50%).bottom(30).height(60).width(60)
     }
     
     func onDeviceDisconnect() {
@@ -107,72 +108,34 @@ class PhotoViewController: UIViewController ,UIPopoverPresentationControllerDele
         return r
     }
     
-    func onTestMotor() {
-        guard let pS = pService, let service = pS.peripheral.serviceWithUUID(uuid: pS.serviceUUID),
-            let char = service.characteristic(withUUID: pS.motorCharUUID) else {
-            return
-        }
-        
-        let motorR = MotorRequest(isClockwise: false, angle: 180)
-        pS.write(data: motorR.data(), charateristic: char).then { (c) -> Promise<CBCharacteristic> in
-            return pS.read(charateristic: char)
-        }.then(execute: { (c) -> Void in
-            guard let value = c.value else {return}
-            let req = MotorRequest(withValue: value)
-            print(req)
-        }).catch { (err) in
-            print(err)
-        }
-    }
-    
-    func onTestLED() {
-        guard let pS = pService, let service = pS.peripheral.serviceWithUUID(uuid: pS.serviceUUID),
-            let char = service.characteristic(withUUID: pS.ledCharUUID) else {
-            return
-        }
-        let ledR = LEDRequest(LED1: 0.1, LED2: 0.1, LED3: 0.1)
-        pS.write(data: ledR!.data(), charateristic: char)
-        .then { (c) -> Void in
-            
-        }.catch { (err) in
-            print(err)
-        }
-        
-    }
     func onPopoView() {
-
         let controller = SliderViewController()
         controller.view.backgroundColor = UIColor.white
         controller.preferredContentSize = CGSize(width: 500, height: 200)
         controller.modalPresentationStyle = .popover
-    
-
         controller.popoverPresentationController?.delegate = self
         controller.popoverPresentationController?.sourceView = view
         controller.popoverPresentationController?.sourceRect = popoButton.frame
         controller.popoverPresentationController?.permittedArrowDirections = .any
-        
         controller.delegate = self
         present(controller, animated: true, completion: nil)
+    }
+    
+    func onStart() {
+        startButton.isEnabled = false
+        guard motorOperationQueue.operations.count == 0, let output = captureOutput else {
+            return
+        }
+        let operation = RotateOperation(pService: pService!, isClockwise: true, stepAngle: 18, totalSteps: 20, stepTimeout: 3, photoOutput: output)
+        operation.delegate = self
+        motorOperationQueue.addOperation(operation)
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }
     
-//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!, traitCollection: UITraitCollection!) -> UIModalPresentationStyle{
-//        return UIModalPresentationStyle.none
-//    }
-    
-    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController){
-        print("prepareForPopoverPresentation")
-    }
-    
-    func popoverPresentationController(_ popoverPresentationController: UIPopoverPresentationController, willRepositionPopoverTo rect: UnsafeMutablePointer<CGRect>, in view: AutoreleasingUnsafeMutablePointer<UIView>) {
-        
-    }
 }
-
 
 extension PhotoViewController:SliderViewControllerDelegate {
     func sliderDidUpdated(led1: Float, led2: Float, led3: Float){
@@ -196,12 +159,28 @@ extension PhotoViewController:SliderViewControllerDelegate {
                 print(err)
             }
     }
-
 }
 
+extension PhotoViewController:RotateOperationDelegate {
+    
+    func operation(operation: RotateOperation, didOccurredError error: Error) {
+        
+    }
+    
+    func operation(operation: RotateOperation, didStopWithError error: RotationError) {
+        
+    }
+    
+    func operationMotorNotReady(operation: RotateOperation) {
+        
+    }
+    
+    func operationDidFinishOneStep(operation: RotateOperation) {
+       print(operation.stepsRemain)
+    }
+    
+    func operationDidFinished(operation: RotateOperation) {
+        startButton.isEnabled = true
+    }
+}
 
-
-//    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
-//        let navigationController = UINavigationController(rootViewController: controller.presentedViewController)
-//         return navigationController
-//    }
